@@ -1,0 +1,6 @@
+.\processors\acesMIPS\pipelines\alu1
+.\processors\acesMIPS\pipelines\alu2
+.\processors\acesMIPS\pipelines\memory
+.\processors\acesMIPS\pipelines\branch
+.\processors\acesMIPS\pipelines\fp
+.\processors\acesMIPS\pipelines\compare

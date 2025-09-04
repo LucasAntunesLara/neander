@@ -1,0 +1,3 @@
+mop[0] include readRegisterBank
+//
+mop[1] comp.behavior

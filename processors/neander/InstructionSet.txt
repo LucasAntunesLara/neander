@@ -1,0 +1,7 @@
+.\processors\neander\instructions\FETCH
+.\processors\neander\instructions\ALI
+.\processors\neander\instructions\NOT
+.\processors\neander\instructions\STA
+.\processors\neander\instructions\JMP
+.\processors\neander\instructions\NOP
+.\processors\neander\instructions\NOTAKEN

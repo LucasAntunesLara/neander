@@ -1,0 +1,83 @@
+//
+// Cria componentes
+//
+create ADDER    7       0        16
+create BUSADDER	15 	0 	 16 	 1 	2
+create ADDR1MUX 17      2        16
+create ADDR2MUX 17      4        16
+create ALU      8       0        16
+create BUS 	15 	0 	 16 	 4 	6
+create IR       0       0        16
+create BUSIR	15 	0 	 16 	 1 	6
+create LOGIC	114	0	  1	16	3	1
+create MAR 	0 	0 	 16
+create MARMUX   17      2        16
+create MDR 	0 	0 	 16
+create BUSMDR	15	0	 16	 1	2
+create MDRMUX	17	2	 16
+create MEM 	3 	1000 	 16 	16
+create N	0	0	  1
+create P	0	0	  1
+create PC       0       0        16
+create BUSPC 	15 	0 	 16	 1 	3
+create PCMUX    17      3	 16
+create PLUS_1   7       1        16
+create REGFILE  50      8        16	 1	2
+create BUSREG	15	0	 16	 1	2
+create SEXT1    113     0         5	16	1
+create SEXT2    113     0         6	16	1
+create SEXT3    113     0         9	16	1
+create SEXT4    113     0        11	16	1
+create SR2MUX   17      2        16
+create Z	0	0	  1
+create ZEXT     113     0         8	16	0	
+//
+// Conecta componentes
+//
+link ADDER      S1      BUSADDER E0
+link BUSADDER   S0      PCMUX    E1
+link BUSADDER   S1      MARMUX   E1
+link ADDR1MUX   S0      ADDER    E2
+link ADDR2MUX   S0      ADDER    E1
+link ALU	S1	BUS	 E2
+link BUS	S0	REGFILE	 E0
+link BUS	S1	PCMUX	 E2
+link BUS	S2	IR	 E1
+link BUS	S3	MAR	 E1
+link BUS	S4	MDRMUX	 E0
+link BUS	S5	LOGIC	 E0
+link IR         S1      BUSIR    E0
+link BUSIR      S0      SEXT1    E0
+link BUSIR      S1      SEXT2    E0
+link BUSIR      S2      SEXT3    E0
+link BUSIR      S3      SEXT4    E0
+link BUSIR      S4      ZEXT     E0
+link LOGIC	S0	N	 E1
+link LOGIC	S1	Z	 E1
+link LOGIC	S2	P	 E1
+link MAR	S1	MEM	 E2
+link MARMUX	S0	BUS	 E0
+link MDR        S1	BUSMDR	 E0
+link BUSMDR	S0	MEM	 E1
+link BUSMDR	S1	BUS	 E3
+link MDRMUX	S0	MDR	 E1
+link MEM	S1	MDRMUX	 E1
+link PC         S1	BUSPC	 E0
+link BUSPC 	S0	PLUS_1	 E1
+link BUSPC      S1      ADDR1MUX E1
+link BUSPC	S2	BUS	 E1
+link PCMUX      S0      PC       E1
+link PLUS_1     S1      PCMUX    E0
+link REGFILE    S0      BUSREG	 E0
+link REGFILE    S1      SR2MUX   E0
+link BUSREG	S0	ALU	 E2
+link BUSREG	S1	ADDR1MUX E0
+link SEXT1      S0      SR2MUX   E1
+link SEXT2      S0      ADDR2MUX E2
+link SEXT3      S0      ADDR2MUX E1
+link SEXT4      S0      ADDR2MUX E0
+link SR2MUX     S0      ALU      E1
+link ZEXT       S0      MARMUX   E0
+//
+// Fim
+//

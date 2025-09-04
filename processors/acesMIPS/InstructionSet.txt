@@ -1,0 +1,7 @@
+.\processors\acesMIPS\instructions\AeL
+.\processors\acesMIPS\instructions\AeLmult
+.\processors\acesMIPS\instructions\Load
+.\processors\acesMIPS\instructions\Store
+.\processors\acesMIPS\instructions\Branch
+.\processors\acesMIPS\instructions\FP
+.\processors\acesMIPS\instructions\Compare

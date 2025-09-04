@@ -1,0 +1,75 @@
+//
+// nop
+//
+imemory[0]=0h
+//
+// 000101 - 00000 - 11111 - 00000 - 00000 - 001110 // bne r0, r31, 0x000E
+//
+imemory[1]=141F000Eh
+//
+// 000001 - 00000 - 00000 - 00000 - 00000 - 001110 // bltz r0, 0x000E
+//
+//imemory[1]=400000Eh
+//
+// 000001 - 00000 - 10000 - 00000 - 00000 - 001110 // bltzal r0, 0x000E
+//
+//imemory[1]=410000Eh
+//
+// 000110 - 00000 - 00000 - 00000 - 00000 - 001110 // blez r0, 0x000E
+//
+//imemory[1]=1800000Eh
+//
+// 000111 - 00000 - 00000 - 00000 - 00000 - 001110 // bgtz r0, 0x000E
+//
+//imemory[1]=1C00000Eh
+//
+// 000001 - 00000 - 10001 - 00000 - 00000 - 001110 // bgezal r0, 0x000E
+//
+//imemory[1]=411000Eh
+//
+// 000100 - 00000 - 00000 - 00000 - 00000 - 001111 // beq r0, r0, 0x000F
+//
+//imemory[0]=1000000fh
+//
+// HALT
+//
+imemory[15]=FFFFFFFFh
+//
+//
+GPRFile[0]=11
+GPRFile[1]=1
+GPRFile[2]=0
+GPRFile[3]=2
+GPRFile[4]=2
+GPRFile[5]=0
+GPRFile[6]=3
+GPRFile[7]=3
+GPRFile[8]=0
+GPRFile[9]=4
+GPRFile[10]=4
+GPRFile[11]=0
+GPRFile[12]=5
+GPRFile[13]=5
+GPRFile[14]=0
+GPRFile[15]=6
+GPRFile[16]=6
+GPRFile[17]=0
+GPRFile[18]=7
+GPRFile[19]=7
+GPRFile[20]=0
+GPRFile[21]=8
+GPRFile[22]=8
+GPRFile[23]=0
+GPRFile[24]=9
+GPRFile[25]=9
+GPRFile[26]=0
+GPRFile[27]=10
+GPRFile[28]=10
+GPRFile[29]=0
+GPRFile[30]=11
+GPRFile[31]=11
+// 00010100000111110000000000001110
+dmemory[7]=ffh
+dmemory[8]=feh
+FPRFile[0]=5,5555
+FPRFile[1]=6,7777

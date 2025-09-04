@@ -1,0 +1,25 @@
+//
+mop[0] muxpc.SEL = 1
+mop[0] pc.read
+mop[0] add.behavior
+mop[0] muxpc.behavior
+mop[0] pc.write
+// 
+mop[1] registers.NR1 = 0
+mop[1] registers.NR2 = 0
+mop[1] registers.RFWrCtrl = 32
+mop[1] registers.read
+// 
+mop[2] alu.OP = 10
+mop[2] muxa.SEL = 1
+mop[2] muxb.SEL = 0
+mop[2] muxa.behavior
+mop[2] muxb.behavior
+mop[2] alu.behavior
+// 
+mop[4] muxwb.SEL = 1
+mop[4] registers.NW1 = 0
+mop[4] registers.RFWrCtrl = 32
+mop[4] muxwb.behavior
+mop[4] registers.write
+mop[4] imemory.read

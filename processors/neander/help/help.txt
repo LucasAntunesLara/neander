@@ -1,0 +1,6 @@
+   Modelo do Neander:
+
+    * devido a sua simplicidade, é o ponto de partida para entender os recursos disponíveis para o acompanhamento e a condução de experimentos com os modelos do T&D-Bench;
+    * é executado digitando-se "simula vneander" no Prompt de comando;
+    * novos programas em Assembly podem ser criados usando-se um editor de textos;
+    * o Manual de Usuário descreve o uso deste simulador do Neander.

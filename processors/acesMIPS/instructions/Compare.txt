@@ -1,0 +1,6 @@
+mop[0] include readRegisterBank
+//
+mop[1] mxGeneral.SEL = 0
+mop[1] mxGeneral.behavior
+mop[1] comp.OP = 0
+mop[1] comp.behavior

@@ -1,0 +1,17 @@
+// ADD
+mop[3] IR.read
+//
+mop[4] SEXT1.behavior
+//
+mop[5] REGFILE.NR0 = 2
+mop[5] REGFILE.NR1 = 3
+mop[5] REGFILE.read
+mop[5] SR2MUX.SEL=0
+mop[5] SR2MUX.behavior
+//
+mop[6] ALU.OP = -1
+mop[6] ALU.behavior
+//
+mop[7] REGFILE.NW0 = 31
+mop[7] REGFILE.write
+mop[7] include setControlSignals

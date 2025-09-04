@@ -1,0 +1,16 @@
+// JMP
+//
+mop[3] IR.read
+//
+mop[4] SEXT2.behavior
+mop[4] ADDR2MUX.SEL = 2
+mop[4] ADDR2MUX.behavior
+mop[4] REGFILE.NR0 = 31
+mop[4] REGFILE.read
+mop[4] ADDR1MUX.SEL = 0
+mop[4] ADDR1MUX.behavior
+mop[4] ADDER.behavior
+//
+mop[5] PCMUX.SEL = 1
+mop[5] PCMUX.behavior
+mop[5] PC.write

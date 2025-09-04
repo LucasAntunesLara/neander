@@ -1,0 +1,77 @@
+#define CHAR 0
+#define INT 1
+
+int globalVar;
+
+main ( )
+{
+ int ret, i, j;
+
+ for ( i = 0; i < 2; i ++)
+    for ( j = 0; j < 64; j ++)
+	ret = assembleRType ( i, 0, 0, 0, 0, j);
+ globalVar = ret;
+ printf ( "%x\n", ret);
+}
+
+int 
+assembleRType ( int opcode, int rs1, int rs2, int rd, int shamt, int func) { 
+ int iInstruction = 0, iTmp; 
+ 
+ if ( opcode > 63) return ( -1); 
+ else { 
+  iTmp = opcode << 26; 
+  iInstruction = iInstruction | iTmp; 
+  globalVar = iInstruction;
+ } 
+ if ( rs1 > 31) return ( -1); 
+ else { 
+  iTmp = rs1 << 21; 
+  iInstruction = iInstruction | iTmp; 
+  globalVar = iInstruction;
+ } 
+ if ( rs2 > 31) return ( -1); 
+ else { 
+  iTmp = rs2 << 16; 
+  iInstruction = iInstruction | iTmp; 
+  globalVar = iInstruction;
+ } 
+ if ( rd > 31) return ( -1); 
+ else { 
+  iTmp = rd << 11; 
+  iInstruction = iInstruction | iTmp; 
+  globalVar = iInstruction;
+ } 
+ if ( shamt > 31) return ( -1); 
+ else { 
+  iTmp = shamt << 6; 
+  iInstruction = iInstruction | iTmp; 
+  globalVar = iInstruction;
+ } 
+ if ( func > 63) return ( -1); 
+ else { 
+  iInstruction = iInstruction | func; 
+  globalVar = iInstruction;
+ } 
+   
+ return ( iInstruction); 
+}
+
+memcpy2 ( char * dest, char * org, int size)
+{
+    int i;
+    
+    printf ( "size = %d\n", size);
+    
+    for ( i = 0; i < size; i ++) * dest ++ = * org ++;
+}
+
+int
+sizeof2 ( int type)
+{
+    switch ( type) {
+ case 0: return ( 1);
+ case 1: return ( 4);
+ default: return ( -1);
+    }
+}

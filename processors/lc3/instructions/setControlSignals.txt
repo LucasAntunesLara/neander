@@ -1,0 +1,9 @@
+// setControlSignals
+//
+logic.behavior
+n.write
+z.write
+p.write
+n.read
+z.read
+p.read

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="jhotdraw.jar"/>
+	<classpathentry kind="lib" path="jcommon-1.0.9.jar"/>
+	<classpathentry kind="lib" path="jfreechart-1.0.5.jar"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

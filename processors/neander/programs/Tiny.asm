@@ -1,0 +1,3 @@
+	ORG 10
+	NOT
+	HLT

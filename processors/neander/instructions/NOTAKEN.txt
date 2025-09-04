@@ -1,0 +1,5 @@
+mop[3] PC.read
+mop[3] ADDPC.behavior
+mop[3] MPXPC.SEL = 0
+mop[3] MPXPC.behavior
+mop[3] PC.write

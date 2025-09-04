@@ -1,0 +1,5 @@
+pc.read
+imemory.read
+add.behavior
+muxpc.behavior
+pc.write

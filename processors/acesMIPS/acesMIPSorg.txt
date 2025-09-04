@@ -1,0 +1,56 @@
+// 
+create pc 		0 0 32
+create imemory 		4 1024 32 32
+// /* Modif.MAC */
+create GPRFile		50 32 32 4 11	
+// aluGeneral nao existe. Eh substituida por alu1_ex ou alu2_ex posteriormente
+create aluGeneral 	8 0 32
+create mxGeneral	17 2 32
+create mx1		17 2 32
+create mx2		17 2 32
+create mx3		17 2 32
+create alu1_ex 		8 0 32
+create alu2_ex 		8 0 32
+create dCacheL1		5 1024 32 32
+create uCacheL2		5 1024 32 32
+create MainMem		5 1024 32 32
+create comp		51 0 32
+create FPRFile		53 32 64 1 2
+create FPUnit		52 0 64
+create hi 		0 0 32
+create lo 		0 0 32
+create $ra 		0 0 32
+create DBUS		15 0 32 4 4
+create ABUS		15 0 32 4 4
+// 
+link pc 	S1 	imemory 	E2
+link GPRFile	S0	alu1_ex		E1
+link GPRFile	S1	mx1		E0
+link GPRFile	S2	alu2_ex		E1
+link GPRFile	S3	mx2		E0
+//link GPRFile	S4	dCacheL1	E1
+link GPRFile	S6	comp		E0
+link FPRFile	S0	FPUnit		E0
+link FPRFile	S1	FPUnit		E1
+link mx1	S0	alu1_ex		E2
+link mx2	S0	alu2_ex		E2
+link GPRFile	S7	mx3		E0
+link mx3	S0	comp		E1
+// /* Modif.MAC */
+link GPRFile	S9	alu1_ex		E3
+link GPRFile	S10	alu2_ex		E3
+//
+// SISTEM DE MEMÓRIA
+//
+create atmp 		0 0 32
+//
+link GPRFile	S4	DBUS		E0
+link DBUS	S0	dCacheL1	E1
+link atmp	S1	ABUS		E0
+link ABUS	S0	dCacheL1	E2
+//
+link DBUS	S1	uCacheL2	E1
+link ABUS	S1	uCacheL2	E2
+//
+link DBUS	S2	MainMem		E1
+link ABUS	S2	MainMem		E2

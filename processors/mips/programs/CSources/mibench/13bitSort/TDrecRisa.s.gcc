@@ -1,0 +1,1634 @@
+	.file	1 "TDboth.c"
+ # GNU C 2.7.2.3 [AL 1.1, MM 40] DECstation running ultrix compiled by GNU C
+ # Cc1 defaults:
+ # Cc1 arguments (-G value = 8, Cpu = 3000, ISA = 1):
+ # -quiet -dumpbase -o
+gcc2_compiled.:
+__gnu_compiled_c:
+	.globl	results
+	.data
+	.align	2
+results:
+	.word	-1
+	.word	-1
+	.word	-1
+	.word	-1
+	.word	-1
+	.word	-1
+	.word	-1
+	.word	-1
+	.word	-1
+	.word	-1
+	.align	2
+bits:
+	.byte	0
+	.byte	1
+	.byte	1
+	.byte	2
+	.byte	1
+	.byte	2
+	.byte	2
+	.byte	3
+	.byte	1
+	.byte	2
+	.byte	2
+	.byte	3
+	.byte	2
+	.byte	3
+	.byte	3
+	.byte	4
+	.byte	1
+	.byte	2
+	.byte	2
+	.byte	3
+	.byte	2
+	.byte	3
+	.byte	3
+	.byte	4
+	.byte	2
+	.byte	3
+	.byte	3
+	.byte	4
+	.byte	3
+	.byte	4
+	.byte	4
+	.byte	5
+	.byte	1
+	.byte	2
+	.byte	2
+	.byte	3
+	.byte	2
+	.byte	3
+	.byte	3
+	.byte	4
+	.byte	2
+	.byte	3
+	.byte	3
+	.byte	4
+	.byte	3
+	.byte	4
+	.byte	4
+	.byte	5
+	.byte	2
+	.byte	3
+	.byte	3
+	.byte	4
+	.byte	3
+	.byte	4
+	.byte	4
+	.byte	5
+	.byte	3
+	.byte	4
+	.byte	4
+	.byte	5
+	.byte	4
+	.byte	5
+	.byte	5
+	.byte	6
+	.byte	1
+	.byte	2
+	.byte	2
+	.byte	3
+	.byte	2
+	.byte	3
+	.byte	3
+	.byte	4
+	.byte	2
+	.byte	3
+	.byte	3
+	.byte	4
+	.byte	3
+	.byte	4
+	.byte	4
+	.byte	5
+	.byte	2
+	.byte	3
+	.byte	3
+	.byte	4
+	.byte	3
+	.byte	4
+	.byte	4
+	.byte	5
+	.byte	3
+	.byte	4
+	.byte	4
+	.byte	5
+	.byte	4
+	.byte	5
+	.byte	5
+	.byte	6
+	.byte	2
+	.byte	3
+	.byte	3
+	.byte	4
+	.byte	3
+	.byte	4
+	.byte	4
+	.byte	5
+	.byte	3
+	.byte	4
+	.byte	4
+	.byte	5
+	.byte	4
+	.byte	5
+	.byte	5
+	.byte	6
+	.byte	3
+	.byte	4
+	.byte	4
+	.byte	5
+	.byte	4
+	.byte	5
+	.byte	5
+	.byte	6
+	.byte	4
+	.byte	5
+	.byte	5
+	.byte	6
+	.byte	5
+	.byte	6
+	.byte	6
+	.byte	7
+	.byte	1
+	.byte	2
+	.byte	2
+	.byte	3
+	.byte	2
+	.byte	3
+	.byte	3
+	.byte	4
+	.byte	2
+	.byte	3
+	.byte	3
+	.byte	4
+	.byte	3
+	.byte	4
+	.byte	4
+	.byte	5
+	.byte	2
+	.byte	3
+	.byte	3
+	.byte	4
+	.byte	3
+	.byte	4
+	.byte	4
+	.byte	5
+	.byte	3
+	.byte	4
+	.byte	4
+	.byte	5
+	.byte	4
+	.byte	5
+	.byte	5
+	.byte	6
+	.byte	2
+	.byte	3
+	.byte	3
+	.byte	4
+	.byte	3
+	.byte	4
+	.byte	4
+	.byte	5
+	.byte	3
+	.byte	4
+	.byte	4
+	.byte	5
+	.byte	4
+	.byte	5
+	.byte	5
+	.byte	6
+	.byte	3
+	.byte	4
+	.byte	4
+	.byte	5
+	.byte	4
+	.byte	5
+	.byte	5
+	.byte	6
+	.byte	4
+	.byte	5
+	.byte	5
+	.byte	6
+	.byte	5
+	.byte	6
+	.byte	6
+	.byte	7
+	.byte	2
+	.byte	3
+	.byte	3
+	.byte	4
+	.byte	3
+	.byte	4
+	.byte	4
+	.byte	5
+	.byte	3
+	.byte	4
+	.byte	4
+	.byte	5
+	.byte	4
+	.byte	5
+	.byte	5
+	.byte	6
+	.byte	3
+	.byte	4
+	.byte	4
+	.byte	5
+	.byte	4
+	.byte	5
+	.byte	5
+	.byte	6
+	.byte	4
+	.byte	5
+	.byte	5
+	.byte	6
+	.byte	5
+	.byte	6
+	.byte	6
+	.byte	7
+	.byte	3
+	.byte	4
+	.byte	4
+	.byte	5
+	.byte	4
+	.byte	5
+	.byte	5
+	.byte	6
+	.byte	4
+	.byte	5
+	.byte	5
+	.byte	6
+	.byte	5
+	.byte	6
+	.byte	6
+	.byte	7
+	.byte	4
+	.byte	5
+	.byte	5
+	.byte	6
+	.byte	5
+	.byte	6
+	.byte	6
+	.byte	7
+	.byte	5
+	.byte	6
+	.byte	6
+	.byte	7
+	.byte	6
+	.byte	7
+	.byte	7
+	.byte	8
+	.sdata
+	.align	2
+LC0:
+	.byte	100,111,110,116,0,0,0,0,
+	.align	2
+LC1:
+	.byte	107,110,111,119,0,0,0,0,
+	.align	2
+LC2:
+	.byte	119,104,97,116,0,0,0,0,
+	.align	2
+LC3:
+	.byte	121,111,117,0,
+	.align	2
+LC4:
+	.byte	119,97,110,116,0,0,0,0,
+	.align	2
+LC5:
+	.byte	116,111,0,0,
+	.align	2
+LC6:
+	.byte	100,111,0,0,
+	.align	2
+LC7:
+	.byte	119,105,116,104,0,0,0,0,
+	.align	2
+LC8:
+	.byte	121,111,117,114,0,0,0,0,
+	.align	2
+LC9:
+	.byte	108,105,102,101,0,0,0,0,
+	.align	2
+LC10:
+	.byte	84,104,101,0,
+	.align	2
+LC11:
+	.byte	109,111,115,116,0,0,0,0,
+	.rdata
+	.align	2
+LC12:
+	.byte	105,110,116,101,114,101,115,116,105,110,103,0,
+	.sdata
+	.align	2
+LC13:
+	.byte	112,101,111,112,108,101,0,0,
+	.align	2
+LC14:
+	.byte	73,0,0,0,
+	.align	2
+LC15:
+	.byte	100,105,100,110,116,0,0,0,
+	.align	2
+LC16:
+	.byte	97,116,0,0,
+	.align	2
+LC17:
+	.byte	50,50,0,0,
+	.align	2
+LC18:
+	.byte	116,104,101,121,0,0,0,0,
+	.align	2
+LC19:
+	.byte	119,97,110,116,101,100,0,0,
+	.align	2
+LC20:
+	.byte	116,104,101,105,114,0,0,0,
+	.align	2
+LC21:
+	.byte	108,105,118,101,115,0,0,0,
+	.align	2
+LC22:
+	.byte	83,111,109,101,0,0,0,0,
+	.align	2
+LC23:
+	.byte	111,102,0,0,
+	.align	2
+LC24:
+	.byte	116,104,101,0,
+	.rdata
+	.align	2
+LC25:
+	.byte	52,48,121,101,97,114,111,108,100,115,0,0,
+	.sdata
+	.align	2
+LC26:
+	.byte	115,116,105,108,108,0,0,0,
+	.align	2
+LC27:
+	.byte	71,101,116,0,
+	.align	2
+LC28:
+	.byte	112,108,101,110,116,121,0,0,
+	.align	2
+LC29:
+	.byte	99,97,108,99,105,117,109,0,
+	.align	2
+LC30:
+	.byte	66,101,0,0,
+	.align	2
+LC31:
+	.byte	107,105,110,100,0,0,0,0,
+	.align	2
+LC32:
+	.byte	107,110,101,101,115,0,0,0,
+	.align	2
+LC33:
+	.byte	89,111,117,108,108,0,0,0,
+	.align	2
+LC34:
+	.byte	109,105,115,115,0,0,0,0,
+	.align	2
+LC35:
+	.byte	116,104,101,109,0,0,0,0,
+	.align	2
+LC36:
+	.byte	119,104,101,110,0,0,0,0,
+	.align	2
+LC37:
+	.byte	116,104,101,121,114,101,0,0,
+	.align	2
+LC38:
+	.byte	103,111,110,101,0,0,0,0,
+	.align	2
+LC39:
+	.byte	77,97,121,98,101,0,0,0,
+	.align	2
+LC40:
+	.byte	121,111,117,108,108,0,0,0,
+	.align	2
+LC41:
+	.byte	109,97,114,114,121,0,0,0,
+	.align	2
+LC42:
+	.byte	109,97,121,98,101,0,0,0,
+	.align	2
+LC43:
+	.byte	119,111,110,116,0,0,0,0,
+	.align	2
+LC44:
+	.byte	104,97,118,101,0,0,0,0,
+	.rdata
+	.align	2
+LC45:
+	.byte	99,104,105,108,100,114,101,110,0,0,0,0,
+	.sdata
+	.align	2
+LC46:
+	.byte	100,105,118,111,114,99,101,0,
+	.align	2
+LC47:
+	.byte	52,48,0,0,
+	.align	2
+LC48:
+	.byte	100,97,110,99,101,0,0,0,
+	.align	2
+LC49:
+	.byte	102,117,110,107,121,0,0,0,
+	.align	2
+LC50:
+	.byte	99,104,105,99,107,101,110,0,
+	.align	2
+LC51:
+	.byte	111,110,0,0,
+	.align	2
+LC52:
+	.byte	55,53,116,104,0,0,0,0,
+	.align	2
+LC53:
+	.byte	119,101,100,100,105,110,103,0,
+	.rdata
+	.align	2
+LC54:
+	.byte	97,110,110,105,118,101,114,115,97,114,121,0,
+	.align	2
+LC55:
+	.byte	87,104,97,116,101,118,101,114,0,0,0,0,
+	.align	2
+LC56:
+	.byte	99,111,110,103,114,97,116,117,108,97,116,101,0,0,0,0,
+	.align	2
+LC57:
+	.byte	121,111,117,114,115,101,108,102,0,0,0,0,
+	.sdata
+	.align	2
+LC58:
+	.byte	116,111,111,0,
+	.align	2
+LC59:
+	.byte	109,117,99,104,0,0,0,0,
+	.align	2
+LC60:
+	.byte	111,114,0,0,
+	.align	2
+LC61:
+	.byte	98,101,114,97,116,101,0,0,
+	.align	2
+LC62:
+	.byte	101,105,116,104,101,114,0,0,
+	.align	2
+LC63:
+	.byte	89,111,117,114,0,0,0,0,
+	.align	2
+LC64:
+	.byte	99,104,111,105,99,101,115,0,
+	.align	2
+LC65:
+	.byte	97,114,101,0,
+	.align	2
+LC66:
+	.byte	104,97,108,102,0,0,0,0,
+	.align	2
+LC67:
+	.byte	99,104,97,110,99,101,0,0,
+	.align	2
+LC68:
+	.byte	83,111,0,0,
+	.rdata
+	.align	2
+LC69:
+	.byte	101,118,101,114,121,98,111,100,121,0,0,0,
+	.sdata
+	.align	2
+LC70:
+	.byte	101,108,115,101,115,0,0,0,
+	.align	2
+LC71:
+	.byte	69,110,106,111,121,0,0,0,
+	.align	2
+LC72:
+	.byte	98,111,100,121,0,0,0,0,
+	.align	2
+LC73:
+	.byte	85,115,101,0,
+	.align	2
+LC74:
+	.byte	105,116,0,0,
+	.align	2
+LC75:
+	.byte	101,118,101,114,121,0,0,0,
+	.align	2
+LC76:
+	.byte	119,97,121,0,
+	.align	2
+LC77:
+	.byte	99,97,110,0,
+	.align	2
+LC78:
+	.byte	68,111,110,116,0,0,0,0,
+	.align	2
+LC79:
+	.byte	98,101,0,0,
+	.align	2
+LC80:
+	.byte	97,102,114,97,105,100,0,0,
+	.align	2
+LC81:
+	.byte	111,116,104,101,114,0,0,0,
+	.align	2
+LC82:
+	.byte	116,104,105,110,107,0,0,0,
+	.align	2
+LC83:
+	.byte	73,116,115,0,
+	.rdata
+	.align	2
+LC84:
+	.byte	103,114,101,97,116,101,115,116,0,0,0,0,
+	.align	2
+LC85:
+	.byte	105,110,115,116,114,117,109,101,110,116,0,0,
+	.sdata
+	.align	2
+LC86:
+	.byte	101,118,101,114,0,0,0,0,
+	.align	2
+LC87:
+	.byte	111,119,110,0,
+	.align	2
+LC88:
+	.byte	68,97,110,99,101,0,0,0,
+	.align	2
+LC89:
+	.byte	101,118,101,110,0,0,0,0,
+	.align	2
+LC90:
+	.byte	105,102,0,0,
+	.align	2
+LC91:
+	.byte	110,111,119,104,101,114,101,0,
+	.align	2
+LC92:
+	.byte	98,117,116,0,
+	.align	2
+LC93:
+	.byte	108,105,118,105,110,103,0,0,
+	.align	2
+LC94:
+	.byte	114,111,111,109,0,0,0,0,
+	.align	2
+LC95:
+	.byte	82,101,97,100,0,0,0,0,
+	.rdata
+	.align	2
+LC96:
+	.byte	100,105,114,101,99,116,105,111,110,115,0,0,
+	.sdata
+	.align	2
+LC97:
+	.byte	102,111,108,108,111,119,0,0,
+	.align	2
+LC98:
+	.byte	68,111,0,0,
+	.align	2
+LC99:
+	.byte	110,111,116,0,
+	.align	2
+LC100:
+	.byte	114,101,97,100,0,0,0,0,
+	.align	2
+LC101:
+	.byte	98,101,97,117,116,121,0,0,
+	.rdata
+	.align	2
+LC102:
+	.byte	109,97,103,97,122,105,110,101,115,0,0,0,
+	.align	2
+LC103:
+	.word	LC0
+	.word	LC1
+	.word	LC2
+	.word	LC3
+	.word	LC4
+	.word	LC5
+	.word	LC6
+	.word	LC7
+	.word	LC8
+	.word	LC9
+	.word	LC10
+	.word	LC11
+	.word	LC12
+	.word	LC13
+	.word	LC14
+	.word	LC1
+	.word	LC15
+	.word	LC1
+	.word	LC16
+	.word	LC17
+	.word	LC2
+	.word	LC18
+	.word	LC19
+	.word	LC5
+	.word	LC6
+	.word	LC7
+	.word	LC20
+	.word	LC21
+	.word	LC22
+	.word	LC23
+	.word	LC24
+	.word	LC11
+	.word	LC12
+	.word	LC25
+	.word	LC14
+	.word	LC1
+	.word	LC26
+	.word	LC0
+	.word	LC27
+	.word	LC28
+	.word	LC23
+	.word	LC29
+	.word	LC30
+	.word	LC31
+	.word	LC5
+	.word	LC8
+	.word	LC32
+	.word	LC33
+	.word	LC34
+	.word	LC35
+	.word	LC36
+	.word	LC37
+	.word	LC38
+	.word	LC39
+	.word	LC40
+	.word	LC41
+	.word	LC42
+	.word	LC3
+	.word	LC43
+	.word	LC39
+	.word	LC40
+	.word	LC44
+	.word	LC45
+	.word	LC42
+	.word	LC3
+	.word	LC43
+	.word	LC39
+	.word	LC40
+	.word	LC46
+	.word	LC16
+	.word	LC47
+	.word	LC42
+	.word	LC40
+	.word	LC48
+	.word	LC24
+	.word	LC49
+	.word	LC50
+	.word	LC51
+	.word	LC8
+	.word	LC52
+	.word	LC53
+	.word	LC54
+	.word	LC55
+	.word	LC3
+	.word	LC6
+	.word	LC0
+	.word	LC56
+	.word	LC57
+	.word	LC58
+	.word	LC59
+	.word	LC60
+	.word	LC61
+	.word	LC57
+	.word	LC62
+	.word	LC63
+	.word	LC64
+	.word	LC65
+	.word	LC66
+	.word	LC67
+	.word	LC68
+	.word	LC65
+	.word	LC69
+	.word	LC70
+	.word	LC71
+	.word	LC8
+	.word	LC72
+	.word	LC73
+	.word	LC74
+	.word	LC75
+	.word	LC76
+	.word	LC3
+	.word	LC77
+	.word	LC78
+	.word	LC79
+	.word	LC80
+	.word	LC23
+	.word	LC74
+	.word	LC60
+	.word	LC23
+	.word	LC2
+	.word	LC81
+	.word	LC13
+	.word	LC82
+	.word	LC23
+	.word	LC74
+	.word	LC83
+	.word	LC24
+	.word	LC84
+	.word	LC85
+	.word	LC40
+	.word	LC86
+	.word	LC87
+	.word	LC88
+	.word	LC89
+	.word	LC90
+	.word	LC3
+	.word	LC44
+	.word	LC91
+	.word	LC5
+	.word	LC6
+	.word	LC74
+	.word	LC92
+	.word	LC8
+	.word	LC93
+	.word	LC94
+	.word	LC95
+	.word	LC24
+	.word	LC96
+	.word	LC89
+	.word	LC90
+	.word	LC3
+	.word	LC0
+	.word	LC97
+	.word	LC35
+	.word	LC98
+	.word	LC99
+	.word	LC100
+	.word	LC101
+	.word	LC102
+	.word	0
+	.text
+	.align	2
+	.globl	main
+	.ent	main
+main:
+	.mask	0xc0000000,-4
+	.fmask	0x00000000,0
+	addi	$sp,$zero,31712
+	addi	$sp,$sp,-688
+	sw	$31,684($sp)
+	sw	$fp,680($sp)
+	move	$fp,$sp
+	sw	$4,688($fp)
+	sw	$5,692($fp)
+	addi	$2,$fp,16
+	addi	$3,$fp,16
+	addi	$2,LC103($zero)
+	move	$4,$3
+	move	$5,$2
+	li	$6,0x00000280		# 640
+	jal	memcpy2
+	sw	$0,660($fp)
+L2:
+	lw	$2,660($fp)
+	move	$3,$2
+	slli	$2,$3,2
+	addi	$3,$fp,16
+	add	$2,$2,$3
+	lw	$3,0($2)
+	beq	$3,$0,L5
+	lw	$2,660($fp)
+	slti	$3,$2,500
+	bne	$3,$0,L4
+	j	L5
+L5:
+	j	L3
+L4:
+	lw	$2,660($fp)
+	move	$3,$2
+	slli	$2,$3,2
+	addi	$3,$fp,16
+	add	$2,$2,$3
+	lw	$4,0($2)
+	jal	strlen2
+	move	$3,$2
+	addi	$2,$3,1
+	lw	$3,660($fp)
+	move	$4,$3
+	slli	$3,$4,4
+	addi	$4,array($zero)
+	add	$3,$3,$4
+	lw	$4,660($fp)
+	move	$5,$4
+	slli	$4,$5,2
+	addi	$6,$fp,16
+	add	$5,$4,$6
+	move	$4,$3
+	lw	$5,0($5)
+	move	$6,$2
+	jal	memcpy2
+	lw	$3,660($fp)
+	addi	$2,$3,1
+	move	$3,$2
+	sw	$3,660($fp)
+	j	L2
+L3:
+	lw	$3,660($fp)
+	addi	$2,$3,-1
+	addi	$4,array($zero)
+	move	$5,$0
+	move	$6,$2
+	jal	quicksortS
+	addi	$2,array($zero)
+	sw	$2,results($zero)
+	lw	$2,660($fp)
+	move	$3,$2
+	slli	$2,$3,4
+	addi	$3,array-16($zero)
+	add	$2,$3,$2
+	sw	$2,results+4($zero)
+	sw	$0,672($fp)
+	sw	$0,668($fp)
+	sw	$0,664($fp)
+L6:
+	lw	$2,664($fp)
+	slti	$3,$2,1500
+	bne	$3,$0,L9
+	j	L7
+L9:
+	lw	$2,672($fp)
+	sw	$2,results+8($zero)
+	lw	$4,672($fp)
+	jal	bit_shifter
+	sw	$2,results+12($zero)
+	lw	$4,672($fp)
+	jal	bit_count
+	sw	$2,results+16($zero)
+	lw	$4,672($fp)
+	jal	bitcount
+	sw	$2,results+20($zero)
+	lw	$4,672($fp)
+	jal	ntbl_bitcnt
+	sw	$2,results+24($zero)
+	lw	$4,672($fp)
+	jal	ntbl_bitcount
+	sw	$2,results+28($zero)
+	lw	$4,672($fp)
+	jal	BW_btbl_bitcount
+	sw	$2,results+32($zero)
+	lw	$4,672($fp)
+	jal	AR_btbl_bitcount
+	sw	$2,results+36($zero)
+L8:
+	lw	$3,664($fp)
+	addi	$2,$3,1
+	move	$3,$2
+	sw	$3,664($fp)
+	lw	$3,672($fp)
+	addi	$2,$3,1
+	move	$3,$2
+	sw	$3,672($fp)
+	j	L6
+L7:
+	move	$2,$0
+	j	L1
+L1:
+	move	$sp,$fp			# sp not trusted here
+	lw	$31,684($sp)
+	lw	$fp,680($sp)
+	addi	$sp,$sp,688
+	hlt
+	.end	main
+	.align	2
+	.globl	troca
+	.ent	troca
+troca:
+	.mask	0xc0000000,-4
+	.fmask	0x00000000,0
+	addi	$sp,$sp,-40
+	sw	$31,36($sp)
+	sw	$fp,32($sp)
+	move	$fp,$sp
+	sw	$4,40($fp)
+	sw	$5,44($fp)
+	lw	$4,40($fp)
+	jal	strlen2
+	move	$3,$2
+	addi	$2,$3,1
+	addi	$4,$fp,16
+	lw	$5,40($fp)
+	move	$6,$2
+	jal	memcpy2
+	lw	$4,44($fp)
+	jal	strlen2
+	move	$3,$2
+	addi	$2,$3,1
+	lw	$4,40($fp)
+	lw	$5,44($fp)
+	move	$6,$2
+	jal	memcpy2
+	addi	$4,$fp,16
+	jal	strlen2
+	move	$3,$2
+	addi	$2,$3,1
+	lw	$4,44($fp)
+	addi	$5,$fp,16
+	move	$6,$2
+	jal	memcpy2
+L10:
+	move	$sp,$fp			# sp not trusted here
+	lw	$31,36($sp)
+	lw	$fp,32($sp)
+	addi	$sp,$sp,40
+	jr	$31
+	.end	troca
+	.align	2
+	.globl	separaS
+	.ent	separaS
+separaS:
+	.mask	0xc0000000,-4
+	.fmask	0x00000000,0
+	addi	$sp,$sp,-48
+	sw	$31,44($sp)
+	sw	$fp,40($sp)
+	move	$fp,$sp
+	sw	$4,48($fp)
+	sw	$5,52($fp)
+	sw	$6,56($fp)
+	lb	$2,52($fp)
+	addi	$3,$2,1
+	sb	$3,32($fp)
+	lb	$2,56($fp)
+	sb	$2,33($fp)
+	lw	$2,52($fp)
+	move	$3,$2
+	slli	$2,$3,4
+	lw	$3,48($fp)
+	add	$2,$2,$3
+	move	$4,$2
+	jal	strlen2
+	move	$3,$2
+	addi	$2,$3,1
+	lw	$3,52($fp)
+	move	$4,$3
+	slli	$3,$4,4
+	lw	$4,48($fp)
+	add	$3,$3,$4
+	addi	$4,$fp,16
+	move	$5,$3
+	move	$6,$2
+	jal	memcpy2
+L12:
+	j	L14
+	j	L13
+L14:
+L15:
+	lb	$2,32($fp)
+	lw	$3,56($fp)
+	slt	$2,$3,$2
+	bne	$2,$0,L18
+	lb	$2,32($fp)
+	move	$3,$2
+	slli	$2,$3,4
+	lw	$3,48($fp)
+	add	$2,$2,$3
+	move	$4,$2
+	addi	$5,$fp,16
+	jal	strcmp2
+	blez	$zero,$2,L17
+	j	L18
+L18:
+	j	L16
+L17:
+	lb	$2,32($fp)
+	addi	$3,$2,1
+	move	$2,$3
+	sb	$2,32($fp)
+	j	L15
+L16:
+	.set	noreorder
+	.set	reorder
+L19:
+	lb	$2,33($fp)
+	move	$3,$2
+	slli	$2,$3,4
+	lw	$3,48($fp)
+	add	$2,$2,$3
+	addi	$4,$fp,16
+	move	$5,$2
+	jal	strcmp2
+	bltz	$zero,$2,L21
+	j	L20
+L21:
+	lb	$2,33($fp)
+	addi	$3,$2,-1
+	move	$2,$3
+	sb	$2,33($fp)
+	j	L19
+L20:
+	lb	$2,32($fp)
+	lb	$3,33($fp)
+	slt	$2,$2,$3
+	bne	$2,$0,L22
+	j	L13
+L22:
+	lb	$2,32($fp)
+	move	$3,$2
+	slli	$2,$3,4
+	lw	$3,48($fp)
+	add	$2,$2,$3
+	lb	$3,33($fp)
+	move	$4,$3
+	slli	$3,$4,4
+	lw	$4,48($fp)
+	add	$3,$3,$4
+	move	$4,$2
+	move	$5,$3
+	jal	troca
+	lb	$2,32($fp)
+	addi	$3,$2,1
+	move	$2,$3
+	sb	$2,32($fp)
+	lb	$2,33($fp)
+	addi	$3,$2,-1
+	move	$2,$3
+	sb	$2,33($fp)
+	j	L12
+L13:
+	lw	$2,52($fp)
+	move	$3,$2
+	slli	$2,$3,4
+	lw	$3,48($fp)
+	add	$2,$2,$3
+	lb	$3,33($fp)
+	move	$4,$3
+	slli	$3,$4,4
+	lw	$4,48($fp)
+	add	$3,$3,$4
+	move	$4,$2
+	move	$5,$3
+	jal	troca
+	lb	$3,33($fp)
+	move	$2,$3
+	j	L11
+L11:
+	move	$sp,$fp			# sp not trusted here
+	lw	$31,44($sp)
+	lw	$fp,40($sp)
+	addi	$sp,$sp,48
+	jr	$31
+	.end	separaS
+	.align	2
+	.globl	quicksortS
+	.ent	quicksortS
+quicksortS:
+	.mask	0xc0000000,-4
+	.fmask	0x00000000,0
+	addi	$sp,$sp,-32
+	sw	$31,28($sp)
+	sw	$fp,24($sp)
+	move	$fp,$sp
+	sw	$4,32($fp)
+	sw	$5,36($fp)
+	sw	$6,40($fp)
+L24:
+	lw	$2,36($fp)
+	lw	$3,40($fp)
+	slt	$2,$2,$3
+	bne	$2,$0,L26
+	j	L25
+L26:
+	lw	$4,32($fp)
+	lw	$5,36($fp)
+	lw	$6,40($fp)
+	jal	separaS
+	sw	$2,16($fp)
+	lw	$2,16($fp)
+	lw	$3,36($fp)
+	subu	$2,$2,$3
+	lw	$3,40($fp)
+	lw	$4,16($fp)
+	subu	$3,$3,$4
+	slt	$2,$2,$3
+	beq	$2,$0,L27
+	lw	$3,16($fp)
+	addi	$2,$3,-1
+	lw	$4,32($fp)
+	lw	$5,36($fp)
+	move	$6,$2
+	jal	quicksortS
+	lw	$2,16($fp)
+	addi	$3,$2,1
+	sw	$3,36($fp)
+	j	L28
+L27:
+	lw	$3,16($fp)
+	addi	$2,$3,1
+	lw	$4,32($fp)
+	move	$5,$2
+	lw	$6,40($fp)
+	jal	quicksortS
+	lw	$2,16($fp)
+	addi	$3,$2,-1
+	sw	$3,40($fp)
+L28:
+	j	L24
+L25:
+L23:
+	move	$sp,$fp			# sp not trusted here
+	lw	$31,28($sp)
+	lw	$fp,24($sp)
+	addi	$sp,$sp,32
+	jr	$31
+	.end	quicksortS
+	.align	2
+	.globl	strlen2
+	.ent	strlen2
+strlen2:
+	.mask	0x40000000,-8
+	.fmask	0x00000000,0
+	addi	$sp,$sp,-16
+	sw	$fp,8($sp)
+	move	$fp,$sp
+	sw	$4,16($fp)
+	lw	$2,16($fp)
+	sw	$2,0($fp)
+	sw	$0,4($fp)
+L30:
+	lw	$2,0($fp)
+	addi	$3,$2,1
+	sw	$3,0($fp)
+	lb	$2,0($2)
+	bne	$2,$0,L33
+	j	L31
+L33:
+	lw	$3,4($fp)
+	addi	$2,$3,1
+	move	$3,$2
+	sw	$3,4($fp)
+L32:
+	j	L30
+L31:
+	lw	$2,4($fp)
+	j	L29
+L29:
+	move	$sp,$fp			# sp not trusted here
+	lw	$fp,8($sp)
+	addi	$sp,$sp,16
+	jr	$31
+	.end	strlen2
+	.align	2
+	.globl	strcmp2
+	.ent	strcmp2
+strcmp2:
+	.mask	0xc0000000,-4
+	.fmask	0x00000000,0
+	addi	$sp,$sp,-40
+	sw	$31,36($sp)
+	sw	$fp,32($sp)
+	move	$fp,$sp
+	sw	$4,40($fp)
+	sw	$5,44($fp)
+	lw	$4,40($fp)
+	jal	strlen2
+	sw	$2,20($fp)
+	lw	$4,44($fp)
+	jal	strlen2
+	sw	$2,24($fp)
+	lw	$2,20($fp)
+	lw	$3,24($fp)
+	slt	$2,$3,$2
+	bne	$2,$0,L35
+	lw	$2,20($fp)
+	j	L36
+L35:
+	lw	$2,24($fp)
+L36:
+	sw	$2,28($fp)
+	sw	$0,16($fp)
+L37:
+	lw	$2,16($fp)
+	lw	$3,28($fp)
+	slt	$2,$2,$3
+	bne	$2,$0,L40
+	j	L38
+L40:
+	lw	$2,40($fp)
+	lw	$3,16($fp)
+	add	$2,$2,$3
+	lw	$3,44($fp)
+	lw	$4,16($fp)
+	add	$3,$3,$4
+	lb	$2,0($2)
+	lb	$3,0($3)
+	beq	$2,$3,L41
+	lw	$2,40($fp)
+	lw	$4,16($fp)
+	add	$3,$2,$4
+	lb	$2,0($3)
+	lw	$3,44($fp)
+	lw	$4,16($fp)
+	add	$3,$3,$4
+	lb	$4,0($3)
+	subu	$3,$2,$4
+	move	$2,$3
+	j	L34
+L41:
+L39:
+	lw	$3,16($fp)
+	addi	$2,$3,1
+	move	$3,$2
+	sw	$3,16($fp)
+	j	L37
+L38:
+	lw	$2,20($fp)
+	lw	$3,24($fp)
+	slt	$2,$3,$2
+	beq	$2,$0,L42
+	li	$2,0x00000001		# 1
+	j	L34
+	j	L43
+L42:
+	lw	$2,24($fp)
+	lw	$3,20($fp)
+	slt	$2,$3,$2
+	beq	$2,$0,L44
+	li	$2,-1			# 0xffffffff
+	j	L34
+	j	L45
+L44:
+	move	$2,$0
+	j	L34
+L45:
+L43:
+L34:
+	move	$sp,$fp			# sp not trusted here
+	lw	$31,36($sp)
+	lw	$fp,32($sp)
+	addi	$sp,$sp,40
+	jr	$31
+	.end	strcmp2
+	.align	2
+	.globl	memcpy2
+	.ent	memcpy2
+memcpy2:
+	.mask	0x40000000,-8
+	.fmask	0x00000000,0
+	addi	$sp,$sp,-16
+	sw	$fp,8($sp)
+	move	$fp,$sp
+	sw	$4,16($fp)
+	sw	$5,20($fp)
+	sw	$6,24($fp)
+	sw	$0,0($fp)
+L47:
+	lw	$2,0($fp)
+	lw	$3,24($fp)
+	slt	$2,$2,$3
+	bne	$2,$0,L50
+	j	L48
+L50:
+	lw	$2,16($fp)
+	addi	$3,$2,1
+	sw	$3,16($fp)
+	lw	$3,20($fp)
+	addi	$4,$3,1
+	sw	$4,20($fp)
+	lb	$3,0($3)
+	sb	$3,0($2)
+L49:
+	lw	$3,0($fp)
+	addi	$2,$3,1
+	move	$3,$2
+	sw	$3,0($fp)
+	j	L47
+L48:
+L46:
+	move	$sp,$fp			# sp not trusted here
+	lw	$fp,8($sp)
+	addi	$sp,$sp,16
+	jr	$31
+	.end	memcpy2
+	.align	2
+	.globl	bit_shifter
+	.ent	bit_shifter
+bit_shifter:
+	.mask	0x40000000,-8
+	.fmask	0x00000000,0
+.risabegin 22
+	addi	$sp,$sp,-16
+	sw	$fp,8($sp)
+	move	$fp,$sp
+	sw	$4,16($fp)
+	sw	$0,4($fp)
+	sw	$0,0($fp)
+L52:
+	lw	$2,16($fp)
+	beq	$2,$0,L56
+	lw	$2,0($fp)
+	sltu	$3,$2,32
+	bne	$3,$0,L55
+.risaend
+	j	L56
+L56:
+	j	L53
+L55:
+.risabegin 21
+	lw	$3,16($fp)
+	andi	$2,$3,0x0001
+	lw	$3,4($fp)
+	add	$2,$3,$2
+	sw	$2,4($fp)
+L54:
+	lw	$3,0($fp)
+	addi	$2,$3,1
+	move	$3,$2
+	sw	$3,0($fp)
+	lw	$2,16($fp)
+	srai	$3,$2,1
+	sw	$3,16($fp)
+	j	L52
+L53:
+	lw	$2,4($fp)
+	j	L51
+L51:
+	move	$sp,$fp			# sp not trusted here
+	lw	$fp,8($sp)
+	addi	$sp,$sp,16
+.risaend
+	jr	$31
+	.end	bit_shifter
+	.align	2
+	.globl	bit_count
+	.ent	bit_count
+bit_count:
+	.mask	0x40000000,-8
+	.fmask	0x00000000,0
+	addi	$sp,$sp,-16
+	sw	$fp,8($sp)
+	move	$fp,$sp
+	sw	$4,16($fp)
+	sw	$0,0($fp)
+	lw	$2,16($fp)
+	beq	$2,$0,L58
+L59:
+	lw	$3,0($fp)
+	addi	$2,$3,1
+	move	$3,$2
+	sw	$3,0($fp)
+L61:
+	lw	$3,16($fp)
+	addi	$2,$3,-1
+	lw	$3,16($fp)
+	and	$2,$2,$3
+	move	$3,$2
+	sw	$3,16($fp)
+	bne	$3,$0,L62
+	j	L60
+L62:
+	j	L59
+L60:
+L58:
+	lw	$2,0($fp)
+	j	L57
+L57:
+	move	$sp,$fp			# sp not trusted here
+	lw	$fp,8($sp)
+	addi	$sp,$sp,16
+	jr	$31
+	.end	bit_count
+	.align	2
+	.globl	bitcount
+	.ent	bitcount
+bitcount:
+	.mask	0x40000000,-8
+	.fmask	0x00000000,0
+	addi	$sp,$sp,-8
+	sw	$fp,0($sp)
+	move	$fp,$sp
+	sw	$4,8($fp)
+	lw	$2,8($fp)
+	li	$4,-1431655766			# 0xaaaaaaaa
+	and	$3,$2,$4
+	srli	$2,$3,1
+	lw	$3,8($fp)
+	li	$4,0x55555555		# 1431655765
+	and	$3,$3,$4
+	add	$2,$2,$3
+	sw	$2,8($fp)
+	lw	$2,8($fp)
+	li	$4,-858993460			# 0xcccccccc
+	and	$3,$2,$4
+	srli	$2,$3,2
+	lw	$3,8($fp)
+	li	$4,0x33333333		# 858993459
+	and	$3,$3,$4
+	add	$2,$2,$3
+	sw	$2,8($fp)
+	lw	$2,8($fp)
+	li	$4,-252645136			# 0xf0f0f0f0
+	and	$3,$2,$4
+	srli	$2,$3,4
+	lw	$3,8($fp)
+	li	$4,0x0f0f0f0f		# 252645135
+	and	$3,$3,$4
+	add	$2,$2,$3
+	sw	$2,8($fp)
+	lw	$2,8($fp)
+	li	$4,-16711936			# 0xff00ff00
+	and	$3,$2,$4
+	srli	$2,$3,8
+	lw	$3,8($fp)
+	li	$4,0x00ff00ff		# 16711935
+	and	$3,$3,$4
+	add	$2,$2,$3
+	sw	$2,8($fp)
+	lw	$2,8($fp)
+	li	$4,-65536			# 0xffff0000
+	and	$3,$2,$4
+	srli	$2,$3,16
+	lw	$4,8($fp)
+	andi	$3,$4,0xffff
+	add	$2,$2,$3
+	sw	$2,8($fp)
+	lw	$2,8($fp)
+	j	L63
+L63:
+	move	$sp,$fp			# sp not trusted here
+	lw	$fp,0($sp)
+	addi	$sp,$sp,8
+	jr	$31
+	.end	bitcount
+	.align	2
+	.globl	ntbl_bitcnt
+	.ent	ntbl_bitcnt
+ntbl_bitcnt:
+	.mask	0xc0000000,-4
+	.fmask	0x00000000,0
+	addi	$sp,$sp,-32
+	sw	$31,28($sp)
+	sw	$fp,24($sp)
+	move	$fp,$sp
+	sw	$4,32($fp)
+	lw	$3,32($fp)
+	andi	$2,$3,0x000f
+	lb	$3,bits($2)
+	sw	$3,16($fp)
+	lw	$3,32($fp)
+	srai	$2,$3,4
+	move	$3,$2
+	sw	$3,32($fp)
+	beq	$3,$0,L65
+	lw	$4,32($fp)
+	jal	ntbl_bitcnt
+	lw	$3,16($fp)
+	add	$2,$3,$2
+	sw	$2,16($fp)
+L65:
+	lw	$2,16($fp)
+	j	L64
+L64:
+	move	$sp,$fp			# sp not trusted here
+	lw	$31,28($sp)
+	lw	$fp,24($sp)
+	addi	$sp,$sp,32
+	jr	$31
+	.end	ntbl_bitcnt
+	.align	2
+	.globl	ntbl_bitcount
+	.ent	ntbl_bitcount
+ntbl_bitcount:
+	.mask	0x40000000,-8
+	.fmask	0x00000000,0
+	addi	$sp,$sp,-8
+	sw	$fp,0($sp)
+	move	$fp,$sp
+	sw	$4,8($fp)
+	lw	$2,8($fp)
+	andi	$3,$2,0x000f
+	lb	$2,bits($3)
+	lw	$4,8($fp)
+	andi	$3,$4,0x00f0
+	srli	$4,$3,4
+	lb	$3,bits($4)
+	add	$2,$2,$3
+	lw	$4,8($fp)
+	andi	$3,$4,0x0f00
+	srli	$4,$3,8
+	lb	$3,bits($4)
+	add	$2,$2,$3
+	lw	$4,8($fp)
+	andi	$3,$4,0xf000
+	srli	$4,$3,12
+	lb	$3,bits($4)
+	add	$2,$2,$3
+	lw	$3,8($fp)
+	li	$4,0x000f0000		# 983040
+	and	$3,$3,$4
+	srli	$4,$3,16
+	lb	$3,bits($4)
+	add	$2,$2,$3
+	lw	$3,8($fp)
+	li	$4,0x00f00000		# 15728640
+	and	$3,$3,$4
+	srli	$4,$3,20
+	lb	$3,bits($4)
+	add	$2,$2,$3
+	lw	$3,8($fp)
+	li	$4,0x0f000000		# 251658240
+	and	$3,$3,$4
+	srli	$4,$3,24
+	lb	$3,bits($4)
+	add	$2,$2,$3
+	lw	$3,8($fp)
+	li	$4,-268435456			# 0xf0000000
+	and	$3,$3,$4
+	srli	$4,$3,28
+	lb	$3,bits($4)
+	add	$4,$2,$3
+	move	$2,$4
+	j	L66
+L66:
+	move	$sp,$fp			# sp not trusted here
+	lw	$fp,0($sp)
+	addi	$sp,$sp,8
+	jr	$31
+	.end	ntbl_bitcount
+	.align	2
+	.globl	BW_btbl_bitcount
+	.ent	BW_btbl_bitcount
+BW_btbl_bitcount:
+	.mask	0x40000000,-8
+	.fmask	0x00000000,0
+	addi	$sp,$sp,-16
+	sw	$fp,8($sp)
+	move	$fp,$sp
+	sw	$4,16($fp)
+	lw	$2,16($fp)
+	sw	$2,0($fp)
+	lb	$3,0($fp)
+	lb	$2,bits($3)
+	lb	$3,1($fp)
+	lb	$4,bits($3)
+	add	$2,$2,$4
+	lb	$3,3($fp)
+	lb	$4,bits($3)
+	add	$2,$2,$4
+	lb	$3,2($fp)
+	lb	$4,bits($3)
+	add	$3,$2,$4
+	move	$2,$3
+	j	L67
+L67:
+	move	$sp,$fp			# sp not trusted here
+	lw	$fp,8($sp)
+	addi	$sp,$sp,16
+	jr	$31
+	.end	BW_btbl_bitcount
+	.align	2
+	.globl	AR_btbl_bitcount
+	.ent	AR_btbl_bitcount
+AR_btbl_bitcount:
+	.mask	0x40000000,-8
+	.fmask	0x00000000,0
+	addi	$sp,$sp,-16
+	sw	$fp,8($sp)
+	move	$fp,$sp
+	sw	$4,16($fp)
+	addi	$5,$fp,16
+	sw	$5,0($fp)
+	lw	$2,0($fp)
+	addi	$3,$2,1
+	sw	$3,0($fp)
+	lb	$2,0($2)
+	lb	$3,bits($2)
+	sw	$3,4($fp)
+	lw	$2,0($fp)
+	addi	$3,$2,1
+	sw	$3,0($fp)
+	lb	$2,0($2)
+	lb	$3,bits($2)
+	lw	$2,4($fp)
+	add	$3,$2,$3
+	sw	$3,4($fp)
+	lw	$2,0($fp)
+	addi	$3,$2,1
+	sw	$3,0($fp)
+	lb	$2,0($2)
+	lb	$3,bits($2)
+	lw	$2,4($fp)
+	add	$3,$2,$3
+	sw	$3,4($fp)
+	lw	$2,0($fp)
+	lb	$3,0($2)
+	lb	$2,bits($3)
+	lw	$3,4($fp)
+	add	$2,$3,$2
+	sw	$2,4($fp)
+	lw	$2,4($fp)
+	j	L68
+L68:
+	move	$sp,$fp			# sp not trusted here
+	lw	$fp,8($sp)
+	addi	$sp,$sp,16
+	jr	$31
+	.end	AR_btbl_bitcount
+	.data
+array:	.word	0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0

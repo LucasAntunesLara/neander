@@ -1,0 +1,9 @@
+// 
+mop[0] muxpc.SEL = 1
+//
+mop[0] pc.read
+mop[0] imemory.read
+mop[0] add.behavior
+mop[0] muxpc.behavior
+mop[0] pc.write
+// 

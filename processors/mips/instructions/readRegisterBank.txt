@@ -1,0 +1,4 @@
+registers.NR1 = 1
+registers.NR2 = 2
+registers.RFWrCtrl = 32
+registers.read

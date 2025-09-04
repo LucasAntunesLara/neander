@@ -1,0 +1,7 @@
+mop[0] include readRegisterBank
+//
+mop[1] dCacheL1.write
+//
+mop[3] uCacheL2.write
+//
+mop[100] MainMem.write

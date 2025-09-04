@@ -1,0 +1,5 @@
+GPRFile.NR0 = 0
+GPRFile.NR1 = 1
+// /* Modif.MAC */
+GPRFile.NR2 = 0
+GPRFile.read

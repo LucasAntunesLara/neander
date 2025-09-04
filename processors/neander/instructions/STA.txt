@@ -1,0 +1,28 @@
+mop[3] PC.read
+mop[3] MPXREM.SEL = 0
+mop[3] MPXREM.behavior
+mop[3] REM.write
+//
+mop[4] REM.read
+mop[4] MEM.read 
+mop[4] MPXRDM.SEL = 1
+mop[4] MPXRDM.behavior
+mop[4] RDM.write
+mop[4] RDM.read 
+mop[4] ADDPC.behavior 
+mop[4] MPXPC.SEL = 0
+mop[4] MPXPC.behavior
+mop[4] PC.write
+//
+mop[5] MPXREM.SEL = 1
+mop[5] MPXREM.behavior
+mop[5] REM.write
+//
+mop[6] ACC.read
+mop[6] MPXRDM.SEL = 0
+mop[6] MPXRDM.behavior
+mop[6] RDM.write
+mop[6] RDM.read
+//
+mop[7] REM.read
+mop[7] MEM.write

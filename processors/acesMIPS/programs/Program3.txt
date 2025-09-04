@@ -1,0 +1,55 @@
+//
+// 000000 - 00000 - 11011 - 00001 - 00000 - 000111 // srav r1, r27, r0
+//
+imemory[1]=1B0807h
+//
+// 000000 - 00000 - 11011 - 00001 - 00011 - 000011 // sra r1, r27, 0x03
+//
+imemory[0]=1B08C3h
+//
+// 001111 - 00000 - 00001 - 11111 - 11111 - 111111 // lui r1, 0xffff
+//
+imemory[2]=3C01FFFFh
+//
+// HALT
+//
+imemory[1]=FFFFFFFFh
+//
+//
+GPRFile[0]=1
+GPRFile[1]=1
+GPRFile[2]=0
+GPRFile[3]=2
+GPRFile[4]=2
+GPRFile[5]=0
+GPRFile[6]=3
+GPRFile[7]=3
+GPRFile[8]=0
+GPRFile[9]=4
+GPRFile[10]=4
+GPRFile[11]=0
+GPRFile[12]=5
+GPRFile[13]=5
+GPRFile[14]=0
+GPRFile[15]=6
+GPRFile[16]=6
+GPRFile[17]=0
+GPRFile[18]=7
+GPRFile[19]=7
+GPRFile[20]=0
+GPRFile[21]=8
+GPRFile[22]=8
+GPRFile[23]=0
+GPRFile[24]=9
+GPRFile[25]=9
+GPRFile[26]=0
+GPRFile[27]=10
+GPRFile[28]=10
+GPRFile[29]=0
+GPRFile[30]=11
+GPRFile[31]=11
+// 00000000000110110000100011000011
+dmemory[7]=ffh
+dmemory[8]=feh
+FPRFile[0]=5,5555
+FPRFile[1]=6,7777

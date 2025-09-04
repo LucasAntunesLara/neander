@@ -1,0 +1,4 @@
+alu.OP = 10
+muxa.behavior
+muxb.behavior
+alu.behavior

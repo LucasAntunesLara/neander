@@ -1,0 +1,6 @@
+ACC.read
+ALU.OP = 10
+ALU.behavior
+ACC.write
+N.write
+Z.write

@@ -1,0 +1,91 @@
+// Cria componentes
+create pc 0 0 32
+create imemory 4 2048 32 8
+create add 7 1 32
+create muxpc 6 0 32
+create if_id 12 0 32
+create bus1 15 0 8 1 2
+create bus2 15 0 8 1 2
+create bus6 15 0 8 1 2
+create bus7 15 0 8 1 2
+// Cria componentes
+create nRI 0 0 32
+create registers 2 32 32
+create se 9 16 16 32
+create 25to0 110 32 6 31
+//create id_ex 12 0 32
+create id_ex 112 6
+// Cria componentes
+create muxa 6 0 32
+//create muxb 6 0 32
+create muxb 17 4 32
+create alu 8 0 32
+create not 10 0 32
+create comp  51 0 32
+create ex_mem 12 0 32
+create bus3 15 0 8 1 2
+create bus4 15 0 8 1 3
+// Cria componentes
+//create dmemory 5 2048 32 8
+create dmemory 101 0
+create bus5 15 0 8 1 3
+create mem_wb 12 0 32
+// Cria componentes
+//create muxwb 6 0 32
+create muxwb 17 4 32
+// Conecta os componentes
+link pc S1 bus1 E0
+link bus1 S0 add E1
+link bus1 S1 imemory E2
+//link imemory S1 if_id E2
+link imemory S1 bus6 E0
+link bus6 S0 if_id E2
+link bus6 S1 if_id E3
+//link add S1 muxpc E2
+link add S1 bus7 E0
+link bus7 S0 muxpc E2
+link bus7 S1 if_id E4
+link muxpc S1 bus2 E0
+link bus2 S0 if_id E1
+link bus2 S1 pc E1
+// Conecta os componentes
+link if_id S1 id_ex E0
+link if_id S2 se E0
+link if_id S3 25to0 E0
+link if_id S4 id_ex E5
+link registers S1 id_ex E1
+link registers S2 id_ex E2
+link se S0 id_ex E3
+link 25to0 S0 id_ex E4
+// Conecta os componentes
+link id_ex S0 muxa E1
+link id_ex S1 bus3 E0
+link bus3 S1 muxa E2
+link id_ex S2 bus4 E0
+link bus4 S0 muxb E0
+link id_ex S3 muxb E1
+link muxa S1 alu E1
+link muxb S0 alu E2
+link alu S1 ex_mem E2
+link bus3 S0 comp E0
+link bus4 S1 ex_mem E3
+link comp S0 ex_mem E1
+//link bus3 S2 comp E0
+link bus4 S2 comp E1
+link id_ex S4 muxb E3
+link id_ex S5 ex_mem E4
+// Conecta os componentes
+link ex_mem S1 not E1 
+link not S1 muxpc SEL
+link ex_mem S2 bus5 E0
+link bus5 S0 muxpc E1
+link bus5 S1 dmemory E1
+link bus5 S2 mem_wb E3
+link ex_mem S3 dmemory E0
+link ex_mem S4 mem_wb E4
+link dmemory S0 mem_wb E2
+// Conecta os componentes
+link mem_wb S2 muxwb E0
+link mem_wb S3 muxwb E1
+link mem_wb S4 muxwb E2
+link muxwb S0 registers E1

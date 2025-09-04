@@ -1,0 +1,8 @@
+//.\processors\mips\instructions\Aritmetica
+.\processors\mips\instructions\Load
+.\processors\mips\instructions\Store
+.\processors\mips\instructions\Branch
+.\processors\mips\instructions\AritRTYPE
+.\processors\mips\instructions\AritITYPE
+.\processors\mips\instructions\Jump
+.\processors\mips\instructions\JumpOnReg

@@ -1,0 +1,14 @@
+.ORIG x3000
+AND R0, R0, #0
+D LD R1, A
+AND R2, R1, #1
+BRp B
+E ADD R1, R1, #-1
+B ADD R0, R0, R1
+ADD R1, R1, #-2
+F BRp B
+ST R0, C
+TRAP x25
+A .BLKW 1
+C .BLKW 1
+.END

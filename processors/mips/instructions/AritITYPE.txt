@@ -1,0 +1,22 @@
+// 
+mop[0] muxpc.SEL = 1
+mop[0] include fetchInstruction
+mop[0] if_id.write
+//
+mop[1] if_id.read
+mop[1] include readRegisterBank
+mop[1] se.behavior
+mop[1] id_ex.write
+//
+mop[2] id_ex.read
+mop[2] muxa.SEL = 1
+mop[2] muxb.SEL = 1
+mop[2] include executeAluOperation
+mop[2] ex_mem.write
+//
+mop[3] ex_mem.read
+mop[3] mem_wb.write
+//
+mop[4] mem_wb.read
+mop[4] muxwb.SEL = 1
+mop[4] include writeRegisterBank

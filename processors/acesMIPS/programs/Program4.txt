@@ -1,0 +1,83 @@
+//
+// 001010 - 00000 - 11111 - 00000 - 00000 - 000001 // slti r31, r0, 0x0009
+//
+imemory[0]=281F0009h
+//
+// 001011 - 00000 - 11111 - 00000 - 00000 - 000009 // sltiu r31, r0, 0x0001
+//
+imemory[0]=2C1F0001h
+//
+// 000000 - 00000 - 00001 - 11111 - 00000 - 101010 // slt r31, r0, r1
+//
+imemory[100]=1F82Ah
+//
+// 000000 - 00011 - 00110 - 11111 - 00000 - 101011 // sltu r31, r3, r6
+//
+imemory[102]=66F82Bh
+//
+// 001111 - 00000 - 00001 - 11111 - 11111 - 111111 // lui r1, 0xffff
+//
+imemory[101]=3C01FFFFh
+//
+// 000000 - 00000 - 00001 - 11111 - 00000 - 011010 // div r0, r1
+//
+imemory[100]=1F81Ah
+//
+// 000000 - 00011 - 00100 - 11111 - 00000 - 011011 // divu r3, r4
+//
+imemory[101]=64F81Bh
+//
+// 000000 - 00000 - 00001 - 11111 - 00000 - 011000 // mult r0, r1
+//
+imemory[102]=1F818h
+//
+// 000000 - 00011 - 00100 - 11111 - 00000 - 011001 // multu r3, r4
+//
+imemory[103]=64F819h
+//
+// 000000 - 01001 - 01010 - 01011 - 00000 - 100000 // add r11, r9, r10
+//
+imemory[104]=12A5820h
+//
+// HALT
+//
+imemory[1]=FFFFFFFFh
+//
+//
+GPRFile[0]=1
+GPRFile[1]=1
+GPRFile[2]=0
+GPRFile[3]=2
+GPRFile[4]=2
+GPRFile[5]=0
+GPRFile[6]=3
+GPRFile[7]=3
+GPRFile[8]=0
+GPRFile[9]=4
+GPRFile[10]=4
+GPRFile[11]=0
+GPRFile[12]=5
+GPRFile[13]=5
+GPRFile[14]=0
+GPRFile[15]=6
+GPRFile[16]=6
+GPRFile[17]=0
+GPRFile[18]=7
+GPRFile[19]=7
+GPRFile[20]=0
+GPRFile[21]=8
+GPRFile[22]=8
+GPRFile[23]=0
+GPRFile[24]=9
+GPRFile[25]=9
+GPRFile[26]=0
+GPRFile[27]=10
+GPRFile[28]=10
+GPRFile[29]=0
+GPRFile[30]=11
+GPRFile[31]=11
+// 00101100000111110000000000000001
+dmemory[7]=ffh
+dmemory[8]=feh
+FPRFile[0]=5,5555
+FPRFile[1]=6,7777

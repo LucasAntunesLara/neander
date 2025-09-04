@@ -1,0 +1,17 @@
+// LEA
+//
+mop[3] IR.read
+//
+mop[4] SEXT3.behavior
+mop[4] ADDR2MUX.SEL = 1
+mop[4] ADDR2MUX.behavior
+mop[4] PC.read
+mop[4] ADDR1MUX.SEL = 1
+mop[4] ADDR1MUX.behavior
+mop[4] ADDER.behavior
+mop[4] MARMUX.SEL = 1
+mop[5] MARMUX.behavior
+//
+mop[5] REGFILE.NW0 = 31
+mop[5] REGFILE.write
+mop[5] include setControlSignals

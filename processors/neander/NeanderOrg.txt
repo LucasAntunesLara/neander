@@ -1,0 +1,41 @@
+// Cria componentes
+create ACC 	0 	0 	8
+create PC 	0 	0 	8
+create RI 	14 	0 	8
+create ALU 	8 	0 	8
+create N 	0 	0 	1
+create Z 	0 	0 	1
+create MEM 	3 	1000 	8 	8
+create REM 	0 	0 	8
+create RDM 	0 	0 	8
+create MPXREM 	6 	0 	8
+create MPXRDM 	6 	0 	8
+create ADDPC	7	1	8
+create MPXPC 	6 	0 	8
+create BUSA	15	0	8	1	2
+create BUSB	15	0	8	1	5
+create BUSC	15	0	8	1	2
+// Conecta os componentes
+link ALU 	S1 	ACC 	E1
+link ALU 	neg 	N 	E1
+link ALU 	zero 	Z 	E1
+link ACC 	S1 	BUSA 	E0
+link BUSA	S0	ALU	E1
+link BUSA	S1	MPXRDM	E1
+link MPXRDM	S1	RDM	E1
+link MEM	S1	MPXRDM	E2
+link RDM	S1	BUSB	E0
+link BUSB	S0	MEM	E1
+link BUSB	S1	ALU 	E2
+link REM	S1	MEM	E2
+link MPXREM	S1	REM	E1
+//
+link PC		S1	BUSC	E0
+link BUSC	S0	MPXREM	E1
+link BUSC	S1	ADDPC	E1
+link ADDPC	S1	MPXPC	E1
+link BUSB	S2	MPXPC	E2
+link MPXPC	S1	PC	E1
+//
+link BUSB	S3	MPXREM	E2
+link BUSB 	S4	RI	E1

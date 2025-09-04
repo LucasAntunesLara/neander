@@ -1,0 +1,59 @@
+// 000000 - 00000 - 00001 - 00010 - 00000 - 100001 // addu r2, r0, r1,
+//
+imemory[0]=11021h
+//
+// 000000 - 00011 - 00100 - 00101 - 00000 - 100000 // add r5, r3, r4
+//
+imemory[1]=642820h
+//
+// 001000 - 00000 - 00001 - 00000 - 00000 - 111111 // addi r1, r0, 0x003f // (63d)
+//
+imemory[2]=2001003Fh
+//
+// HALT
+//
+imemory[3]=FFFFFFFFh
+//
+//
+GPRFile[0]=1
+GPRFile[1]=1
+GPRFile[2]=0
+GPRFile[3]=2
+GPRFile[4]=2
+GPRFile[5]=0
+GPRFile[6]=3
+GPRFile[7]=3
+GPRFile[8]=0
+GPRFile[9]=4
+GPRFile[10]=4
+GPRFile[11]=0
+GPRFile[12]=5
+GPRFile[13]=5
+GPRFile[14]=0
+GPRFile[15]=6
+GPRFile[16]=6
+GPRFile[17]=0
+GPRFile[18]=7
+GPRFile[19]=7
+GPRFile[20]=0
+GPRFile[21]=8
+GPRFile[22]=8
+GPRFile[23]=0
+GPRFile[24]=9
+GPRFile[25]=9
+GPRFile[26]=0
+GPRFile[27]=10
+GPRFile[28]=10
+GPRFile[29]=0
+GPRFile[30]=11
+GPRFile[31]=11
+// 00111000000000010000000000111110
+dCacheL1[7]=ffh
+dCacheL1[8]=feh
+FPRFile[0]=5,5555
+FPRFile[1]=6,7777
+//
+uCacheL2[7]=333
+uCacheL2[8]=334
+MainMem[7]=444
+MainMem[8]=445

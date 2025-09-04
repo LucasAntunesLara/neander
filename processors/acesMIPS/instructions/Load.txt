@@ -1,0 +1,7 @@
+mop[0] include readRegisterBank
+//
+mop[1] dCacheL1.read
+//
+mop[3] uCacheL2.read
+//
+mop[100] MainMem.read

@@ -1,0 +1,3 @@
+.STRINGZ "asassasas"cccxcxcc"
+.END
+ADD R1, R2, R3

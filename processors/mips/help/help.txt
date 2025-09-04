@@ -1,0 +1,9 @@
+    Modelo do MIPS com pipeline:
+
+    * é o modelo do MIPS I com os seus tradicionais cinco estágio de pipeline;
+    * é executado digitando-se "simula vdlx" no Prompt de comando;
+    * programas Assembly estão disponíveis na pasta processors/Neander/programs e novos programas em Assembly podem ser criados usando-se um editor de textos;
+    * as instruções suportadas pelo montador, no estágio atual, são: lw, sw, add, mult, sub, or, and, addi, ori, andi, bgez, bgtz, blez, bne e beq. O formato das instruções, em Assembly, segue o que está descrito no livro do Hennessy e do Patterson (a interface hardware/software);
+    * a descrição do MIPS com pipeline prevê a inserção de NOPs (add $0,$0,$0) quando há a detecção de uma dependência de dados ou quando há a execução de um branch. Porém, este comportamento pode ser desativado com a atribuição do valor 0 aos itens de configuração TDCF_TestHazards e TDCF_TestBranches;
+    * para alterar TDCF_TestHazards e TDCF_TestBranches: menu Alterar, opção Configurar processador..., escolher tipo de porta: STATUS or CONFIG.,  escolher nome do item a configurar: TDCF_TestHazards ou TDCF_TestBranches, e digitar 1 para ativar o tratamento ou 0 para desativá-lo;
+    * na organização do MIPS, há um comparador COMP que testa a condição de branches no estágio EXECUTE e uma porta NOT que inverte o resultado do comparador para selecionar o endereço da próxima instrução através do multiplexador MUXPC.

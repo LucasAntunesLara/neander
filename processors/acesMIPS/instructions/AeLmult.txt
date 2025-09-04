@@ -1,0 +1,5 @@
+// /* Modif.MULT and others - begin */	
+mop[0] include readRegisterBank
+//
+mop[2] include executeAluOperation
+// /* Modif.MULT and others - end */	

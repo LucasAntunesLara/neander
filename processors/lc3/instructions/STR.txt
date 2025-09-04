@@ -1,0 +1,29 @@
+// STR
+//
+mop[3] IR.read
+//
+mop[4] SEXT2.behavior
+mop[4] ADDR2MUX.SEL = 2
+mop[4] ADDR2MUX.behavior
+mop[4] REGFILE.NR0 = 31
+mop[4] REGFILE.read
+mop[4] ADDR1MUX.SEL = 0
+mop[4] ADDR1MUX.behavior
+mop[4] ADDER.behavior
+mop[4] MARMUX.SEL = 1
+mop[4] MARMUX.behavior
+mop[4] MAR.write
+//
+mop[5] REGFILE.NR1 = 31
+mop[5] REGFILE.read
+mop[5] SR2MUX.SEL = 0
+mop[5] SR2MUX.behavior
+mop[5] ALU.OP = -1
+mop[5] ALU.behavior
+mop[5] MDRMUX.SEL = 0
+mop[5] MDRMUX.behavior
+mop[5] MDR.write
+//
+mop[6] MDR.read
+mop[6] MAR.read
+mop[6] MEM.write

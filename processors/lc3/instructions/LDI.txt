@@ -1,0 +1,33 @@
+// LDI
+//
+mop[3] IR.read
+//
+mop[4] SEXT3.behavior
+mop[4] ADDR2MUX.SEL = 1
+mop[4] ADDR2MUX.behavior
+mop[4] PC.read
+mop[4] ADDR1MUX.SEL = 1
+mop[4] ADDR1MUX.behavior
+mop[4] ADDER.behavior
+mop[4] MARMUX.SEL = 1
+mop[5] MARMUX.behavior
+mop[5] MAR.write
+//
+mop[5] MAR.read
+mop[5] MEM.read
+mop[5] MDRMUX.SEL = 1
+mop[5] MDRMUX.behavior
+mop[5] MDR.write
+//
+mop[6] MDR.read
+mop[6] MAR.write
+mop[6] MAR.read
+mop[6] MEM.read
+mop[6] MDRMUX.SEL = 1
+mop[6] MDRMUX.behavior
+mop[6] MDR.write
+//
+mop[7] MDR.read
+mop[7] REGFILE.NW0 = 31
+mop[7] REGFILE.write
+mop[7] include setControlSignals

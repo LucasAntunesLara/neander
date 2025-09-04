@@ -1,0 +1,16 @@
+// FETCH
+mop[0] PC.read
+mop[0] MAR.write
+mop[0] PLUS_1.behavior
+mop[0] PCMUX.sel = 0
+mop[0] PCMUX.behavior
+mop[0] PC.write
+//
+mop[1] MAR.read
+mop[1] MEM.read
+mop[1] MDRMUX.sel = 1
+mop[1] MDRMUX.behavior
+mop[1] MDR.write
+//
+mop[2] MDR.read
+mop[2] IR.write

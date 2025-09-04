@@ -1,0 +1,6 @@
+mop[3] ACC.read
+mop[3] ALU.OP=10
+mop[3] ALU.behavior
+mop[3] ACC.write
+mop[3] N.write
+mop[3] Z.write

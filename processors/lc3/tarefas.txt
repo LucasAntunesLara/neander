@@ -1,0 +1,27 @@
+:: Tarefas futuras ::
+
+LC-3:
+
+- Corrigir mnemônicos na memória, e em outros lugares;
+- Implementar interrupções
+- Implementar rotinas TRAP
+- Implementar sistema de entrada/saída
+
+
+Página T&D-Bench:
+
+- "Modernizar" layout
+- Sistema de login
+- Gerenciador de conteúdo
+- Gcc online
+- Tarefas online
+- Portal de desenvolvimento
+
+Jogo Neander Secrets:
+
+- Rodar C++ no Eclipse
+- Definir cronograma com Joacir
+- Modelar painéis
+- Modelar estrutura
+- Modelar animações
+- Expandir/melhorar

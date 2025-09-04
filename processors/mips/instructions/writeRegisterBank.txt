@@ -1,0 +1,4 @@
+registers.NW1 = 3
+registers.RFWrCtrl = 32
+muxwb.behavior
+registers.write

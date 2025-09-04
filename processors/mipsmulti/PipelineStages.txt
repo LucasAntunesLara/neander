@@ -1,0 +1,3 @@
+//.\processors\mipsmulti\pipelines\5cycles
+//.\processors\mipsmulti\pipelines\2Cycles
+.\processors\mipsmulti\pipelines\1Cycle

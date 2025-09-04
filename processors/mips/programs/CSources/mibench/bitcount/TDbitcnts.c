@@ -1,0 +1,165 @@
+int results [8]={-1,-1,-1,-1,-1,-1,-1,-1};
+static char bits[256] =
+{
+      0, 1, 1, 2, 1, 2, 2, 3, 1, 2, 2, 3, 2, 3, 3, 4,  /* 0   - 15  */
+      1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3, 4, 3, 4, 4, 5,  /* 16  - 31  */
+      1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3, 4, 3, 4, 4, 5,  /* 32  - 47  */
+      2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6,  /* 48  - 63  */
+      1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3, 4, 3, 4, 4, 5,  /* 64  - 79  */
+      2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6,  /* 80  - 95  */
+      2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6,  /* 96  - 111 */
+      3, 4, 4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5, 6, 6, 7,  /* 112 - 127 */
+      1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3, 4, 3, 4, 4, 5,  /* 128 - 143 */
+      2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6,  /* 144 - 159 */
+      2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6,  /* 160 - 175 */
+      3, 4, 4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5, 6, 6, 7,  /* 176 - 191 */
+      2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6,  /* 192 - 207 */
+      3, 4, 4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5, 6, 6, 7,  /* 208 - 223 */
+      3, 4, 4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5, 6, 6, 7,  /* 224 - 239 */
+      4, 5, 5, 6, 5, 6, 6, 7, 5, 6, 6, 7, 6, 7, 7, 8   /* 240 - 255 */
+};
+
+#define CHAR_BIT 8
+#define ITERATIONS 1500
+
+int bit_shifter(int x);
+
+int main(int argc, char *argv[])
+{
+  int i;
+  int j, n, seed;
+/*
+  static int (* CDECL pBitCntFunc[FUNCS])(long) = {
+    bit_count,
+    bitcount,
+    ntbl_bitcnt,
+    ntbl_bitcount,
+    //            btbl_bitcnt, DOESNT WORK
+    BW_btbl_bitcount,
+    AR_btbl_bitcount,
+    bit_shifter
+  };
+*/
+    
+    for (j = n = seed = 0; j < ITERATIONS; j++, seed ++) {
+#ifndef TDBENCH
+	printf ( "seed = %d, varios algoritmos => \t", seed);
+#endif
+	results[0]=seed;
+	results[1]=bit_shifter (seed);
+	results[2]=bit_count (seed);
+	results[3]=bitcount (seed);
+	results[4]=ntbl_bitcnt (seed);
+	results[5]=ntbl_bitcount (seed);
+	results[6]=BW_btbl_bitcount (seed);
+	results[7]=AR_btbl_bitcount (seed);
+#ifndef TDBENCH
+	for ( i = 1; i < 8; i ++)
+	    printf ( " %d, ", results[i]);
+	printf ( "\n");
+#endif
+    }
+}
+
+int bit_shifter( int x)
+{
+  int i, n;
+  
+  for (i = n = 0; x && (i < (sizeof(long) * CHAR_BIT)); ++i, x >>= 1)
+    n += (int)(x & 1L);
+  return n;
+}
+
+int bit_count(int x)
+{
+        int n = 0;
+/*
+** The loop will execute once for each bit of x set, this is in average
+** twice as fast as the shift/test method.
+*/
+        if (x) do
+              n++;
+        while (0 != (x = x&(x-1))) ;
+        return(n);
+}
+
+int bitcount(int i)
+{
+      i = ((i & 0xAAAAAAAAL) >>  1) + (i & 0x55555555L);
+      i = ((i & 0xCCCCCCCCL) >>  2) + (i & 0x33333333L);
+      i = ((i & 0xF0F0F0F0L) >>  4) + (i & 0x0F0F0F0FL);
+      i = ((i & 0xFF00FF00L) >>  8) + (i & 0x00FF00FFL);
+      i = ((i & 0xFFFF0000L) >> 16) + (i & 0x0000FFFFL);
+      return (int)i;
+}
+
+/*
+**  Count bits in each nybble
+**
+**  Note: Only the first 16 table entries are used, the rest could be
+**        omitted.
+*/
+int ntbl_bitcnt(int x)
+{
+      int cnt = bits[(int)(x & 0x0000000FL)];
+
+      if (0L != (x >>= 4))
+            cnt += ntbl_bitcnt(x);
+
+      return cnt;
+}
+
+/*
+**  Count bits in each nybble
+**
+**  Note: Only the first 16 table entries are used, the rest could be
+**        omitted.
+*/
+int ntbl_bitcount(int x)
+{
+      return
+            bits[ (int) (x & 0x0000000FUL)       ] +
+            bits[ (int)((x & 0x000000F0UL) >> 4) ] +
+            bits[ (int)((x & 0x00000F00UL) >> 8) ] +
+            bits[ (int)((x & 0x0000F000UL) >> 12)] +
+            bits[ (int)((x & 0x000F0000UL) >> 16)] +
+            bits[ (int)((x & 0x00F00000UL) >> 20)] +
+            bits[ (int)((x & 0x0F000000UL) >> 24)] +
+            bits[ (int)((x & 0xF0000000UL) >> 28)];
+}
+
+/*
+**  Count bits in each byte
+**
+**  by Bruce Wedding, works best on Watcom & Borland
+*/
+int BW_btbl_bitcount(int x)
+{
+      union 
+      { 
+            unsigned char ch[4]; 
+            long y; 
+      } U; 
+ 
+      U.y = x; 
+ 
+      return bits[ U.ch[0] ] + bits[ U.ch[1] ] + 
+             bits[ U.ch[3] ] + bits[ U.ch[2] ]; 
+}
+
+/*
+**  Count bits in each byte
+**
+**  by Auke Reitsma, works best on Microsoft, Symantec, and others
+*/
+int AR_btbl_bitcount(int x)
+{
+      unsigned char * Ptr = (unsigned char *) &x ;
+      int Accu ;
+
+      Accu  = bits[ *Ptr++ ];
+      Accu += bits[ *Ptr++ ];
+      Accu += bits[ *Ptr++ ];
+      Accu += bits[ *Ptr ];
+      return Accu;
+}

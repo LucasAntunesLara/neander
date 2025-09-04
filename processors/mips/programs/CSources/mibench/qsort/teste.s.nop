@@ -1,0 +1,644 @@
+	.file	1 "TDqsort_small.c"
+
+ # GNU C 2.7.2.3 [AL 1.1, MM 40] DECstation running ultrix compiled by GNU C
+
+ # Cc1 defaults:
+
+ # Cc1 arguments (-G value = 8, Cpu = 3000, ISA = 1):
+ # -quiet -dumpbase -o
+
+gcc2_compiled.:
+__gnu_compiled_c:
+	.globl	results
+	.data
+	.align	2
+results:
+	.word	-1
+	.word	-1
+	.word	-1
+	.word	-1
+	.word	-1
+	.sdata
+	.align	2
+$LC0:
+	.ascii	"abb\000"
+	.align	2
+$LC1:
+	.ascii	"you\000"
+	.align	2
+$LC2:
+	.ascii	"not\000"
+	.align	2
+$LC3:
+	.ascii	"it\000"
+	.align	2
+$LC4:
+	.ascii	"dad\000"
+	.align	2
+$LC5:
+	.ascii	"yoo\000"
+	.align	2
+$LC6:
+	.ascii	"hoo\000"
+	.align	2
+$LC7:
+	.ascii	"oo\000"
+	.align	2
+$LC8:
+	.ascii	"oh\000"
+	.align	2
+$LC9:
+	.ascii	"xx\000"
+	.align	2
+$LC10:
+	.ascii	"x\000"
+	.align	2
+$LC11:
+	.ascii	"field\000"
+	.align	2
+$LC12:
+	.ascii	"new\000"
+	.align	2
+$LC13:
+	.ascii	"row\000"
+	.rdata
+	.align	2
+$LC14:
+	.word	$LC0
+	.word	$LC1
+	.word	$LC2
+	.word	$LC3
+	.word	$LC4
+	.word	$LC5
+	.word	$LC6
+	.word	$LC7
+	.word	$LC8
+	.word	$LC9
+	.word	$LC9
+	.word	$LC10
+	.word	$LC10
+	.word	$LC11
+	.word	$LC12
+	.word	$LC13
+	.word	0
+	.align	2
+$LC15:
+	.ascii	"\n"
+	.ascii	"Sorting %d elements.\n\n\000"
+	.align	2
+$LC16:
+	.ascii	"%d = %s\n\000"
+	.text
+	.align	2
+	.globl	main
+	.ent	main
+main:
+	.frame	$fp,104,$31		# vars= 80, regs= 2/0, args= 16, extra= 0
+	.mask	0xc0000000,-4
+	.fmask	0x00000000,0
+	subu	$sp,$sp,104
+	sw	$31,100($sp)
+	sw	$fp,96($sp)
+	move	$fp,$sp
+	sw	$4,104($fp)
+	sw	$5,108($fp)
+	jal	__main
+	addu	$2,$fp,16
+	addu	$3,$fp,16
+	la	$2,$LC14
+	move	$4,$3
+	move	$5,$2
+	li	$6,0x00000044		# 68
+	jal	memcpy
+	sw	$0,92($fp)
+$L2:
+	lw	$2,92($fp)
+	move	$3,$2
+	sll	$2,$3,2
+	addu	$3,$fp,16
+	addu	$2,$2,$3
+	lw	$3,0($2)
+	beq	$3,$0,$L5
+	lw	$2,92($fp)
+	slt	$3,$2,500
+	bne	$3,$0,$L4
+	j	$L5
+$L5:
+	j	$L3
+$L4:
+	lw	$2,92($fp)
+	move	$3,$2
+	sll	$2,$3,2
+	addu	$3,$fp,16
+	addu	$2,$2,$3
+	lw	$4,0($2)
+	jal	strlen
+	move	$3,$2
+	addu	$2,$3,1
+	lw	$3,92($fp)
+	move	$4,$3
+	sll	$3,$4,4
+	la	$4,array
+	addu	$3,$3,$4
+	lw	$4,92($fp)
+	move	$5,$4
+	sll	$4,$5,2
+	addu	$6,$fp,16
+	addu	$5,$4,$6
+	move	$4,$3
+	lw	$5,0($5)
+	move	$6,$2
+	jal	memcpy2
+	lw	$3,92($fp)
+	addu	$2,$3,1
+	move	$3,$2
+	sw	$3,92($fp)
+	j	$L2
+$L3:
+	la	$4,$LC15
+	lw	$5,92($fp)
+	jal	printf
+	lw	$3,92($fp)
+	addu	$2,$3,-1
+	la	$4,array
+	move	$5,$0
+	move	$6,$2
+	jal	quicksortS
+	sw	$0,88($fp)
+$L6:
+	lw	$2,88($fp)
+	lw	$3,92($fp)
+	slt	$2,$2,$3
+	bne	$2,$0,$L9
+	j	$L7
+$L9:
+	lw	$2,88($fp)
+	move	$3,$2
+	sll	$2,$3,4
+	la	$3,array
+	addu	$2,$2,$3
+	la	$4,$LC16
+	lw	$5,88($fp)
+	move	$6,$2
+	jal	printf
+$L8:
+	lw	$3,88($fp)
+	addu	$2,$3,1
+	move	$3,$2
+	sw	$3,88($fp)
+	j	$L6
+$L7:
+	la	$2,array
+	sw	$2,results
+	lw	$2,92($fp)
+	move	$3,$2
+	sll	$2,$3,4
+	la	$3,array-16
+	addu	$2,$3,$2
+	sw	$2,results+4
+	move	$2,$0
+	j	$L1
+$L1:
+	move	$sp,$fp			# sp not trusted here
+	lw	$31,100($sp)
+	lw	$fp,96($sp)
+	addu	$sp,$sp,104
+	j	$31
+	.end	main
+	.align	2
+	.globl	troca
+	.ent	troca
+troca:
+	.frame	$fp,40,$31		# vars= 16, regs= 2/0, args= 16, extra= 0
+	.mask	0xc0000000,-4
+	.fmask	0x00000000,0
+	subu	$sp,$sp,40
+	sw	$31,36($sp)
+	sw	$fp,32($sp)
+	move	$fp,$sp
+	sw	$4,40($fp)
+	sw	$5,44($fp)
+	lw	$4,40($fp)
+	jal	strlen
+	move	$3,$2
+	addu	$2,$3,1
+	addu	$4,$fp,16
+	lw	$5,40($fp)
+	move	$6,$2
+	jal	memcpy2
+	lw	$4,44($fp)
+	jal	strlen
+	move	$3,$2
+	addu	$2,$3,1
+	lw	$4,40($fp)
+	lw	$5,44($fp)
+	move	$6,$2
+	jal	memcpy2
+	addu	$4,$fp,16
+	jal	strlen
+	move	$3,$2
+	addu	$2,$3,1
+	lw	$4,44($fp)
+	addu	$5,$fp,16
+	move	$6,$2
+	jal	memcpy2
+$L10:
+	move	$sp,$fp			# sp not trusted here
+	lw	$31,36($sp)
+	lw	$fp,32($sp)
+	addu	$sp,$sp,40
+	j	$31
+	.end	troca
+	.align	2
+	.globl	separaS
+	.ent	separaS
+separaS:
+	.frame	$fp,48,$31		# vars= 24, regs= 2/0, args= 16, extra= 0
+	.mask	0xc0000000,-4
+	.fmask	0x00000000,0
+	subu	$sp,$sp,48
+	sw	$31,44($sp)
+	sw	$fp,40($sp)
+	move	$fp,$sp
+	sw	$4,48($fp)
+	sw	$5,52($fp)
+	sw	$6,56($fp)
+	lbu	$2,52($fp)
+	addu	$3,$2,1
+	sb	$3,32($fp)
+	lbu	$2,56($fp)
+	sb	$2,33($fp)
+	lw	$2,52($fp)
+	move	$3,$2
+	sll	$2,$3,4
+	lw	$3,48($fp)
+	addu	$2,$2,$3
+	move	$4,$2
+	jal	strlen
+	move	$3,$2
+	addu	$2,$3,1
+	lw	$3,52($fp)
+	move	$4,$3
+	sll	$3,$4,4
+	lw	$4,48($fp)
+	addu	$3,$3,$4
+	addu	$4,$fp,16
+	move	$5,$3
+	move	$6,$2
+	jal	memcpy2
+$L12:
+	j	$L14
+	j	$L13
+$L14:
+$L15:
+	lb	$2,32($fp)
+	lw	$3,56($fp)
+	slt	$2,$3,$2
+	bne	$2,$0,$L18
+	lb	$2,32($fp)
+	move	$3,$2
+	sll	$2,$3,4
+	lw	$3,48($fp)
+	addu	$2,$2,$3
+	move	$4,$2
+	addu	$5,$fp,16
+	jal	strcmp2
+	blez	$2,$L17
+	j	$L18
+$L18:
+	j	$L16
+$L17:
+	lbu	$2,32($fp)
+	addu	$3,$2,1
+	move	$2,$3
+	sb	$2,32($fp)
+	j	$L15
+$L16:
+	.set	noreorder
+	nop
+	.set	reorder
+$L19:
+	lb	$2,33($fp)
+	move	$3,$2
+	sll	$2,$3,4
+	lw	$3,48($fp)
+	addu	$2,$2,$3
+	addu	$4,$fp,16
+	move	$5,$2
+	jal	strcmp2
+	bltz	$2,$L21
+	j	$L20
+$L21:
+	lbu	$2,33($fp)
+	addu	$3,$2,-1
+	move	$2,$3
+	sb	$2,33($fp)
+	j	$L19
+$L20:
+	lb	$2,32($fp)
+	lb	$3,33($fp)
+	slt	$2,$2,$3
+	bne	$2,$0,$L22
+	j	$L13
+$L22:
+	lb	$2,32($fp)
+	move	$3,$2
+	sll	$2,$3,4
+	lw	$3,48($fp)
+	addu	$2,$2,$3
+	lb	$3,33($fp)
+	move	$4,$3
+	sll	$3,$4,4
+	lw	$4,48($fp)
+	addu	$3,$3,$4
+	move	$4,$2
+	move	$5,$3
+	jal	troca
+	lbu	$2,32($fp)
+	addu	$3,$2,1
+	move	$2,$3
+	sb	$2,32($fp)
+	lbu	$2,33($fp)
+	addu	$3,$2,-1
+	move	$2,$3
+	sb	$2,33($fp)
+	j	$L12
+$L13:
+	lw	$2,52($fp)
+	move	$3,$2
+	sll	$2,$3,4
+	lw	$3,48($fp)
+	addu	$2,$2,$3
+	lb	$3,33($fp)
+	move	$4,$3
+	sll	$3,$4,4
+	lw	$4,48($fp)
+	addu	$3,$3,$4
+	move	$4,$2
+	move	$5,$3
+	jal	troca
+	lb	$3,33($fp)
+	move	$2,$3
+	j	$L11
+$L11:
+	move	$sp,$fp			# sp not trusted here
+	lw	$31,44($sp)
+	lw	$fp,40($sp)
+	addu	$sp,$sp,48
+	j	$31
+	.end	separaS
+	.align	2
+	.globl	quicksortS
+	.ent	quicksortS
+quicksortS:
+	.frame	$fp,32,$31		# vars= 8, regs= 2/0, args= 16, extra= 0
+	.mask	0xc0000000,-4
+	.fmask	0x00000000,0
+	subu	$sp,$sp,32
+	sw	$31,28($sp)
+	sw	$fp,24($sp)
+	move	$fp,$sp
+	sw	$4,32($fp)
+	sw	$5,36($fp)
+	sw	$6,40($fp)
+$L24:
+	lw	$2,36($fp)
+	lw	$3,40($fp)
+	slt	$2,$2,$3
+	bne	$2,$0,$L26
+	j	$L25
+$L26:
+	lw	$4,32($fp)
+	lw	$5,36($fp)
+	lw	$6,40($fp)
+	jal	separaS
+	sw	$2,16($fp)
+	lw	$2,16($fp)
+	lw	$3,36($fp)
+	subu	$2,$2,$3
+	lw	$3,40($fp)
+	lw	$4,16($fp)
+	subu	$3,$3,$4
+	slt	$2,$2,$3
+	beq	$2,$0,$L27
+	lw	$3,16($fp)
+	addu	$2,$3,-1
+	lw	$4,32($fp)
+	lw	$5,36($fp)
+	move	$6,$2
+	jal	quicksortS
+	lw	$2,16($fp)
+	addu	$3,$2,1
+	sw	$3,36($fp)
+	j	$L28
+$L27:
+	lw	$3,16($fp)
+	addu	$2,$3,1
+	lw	$4,32($fp)
+	move	$5,$2
+	lw	$6,40($fp)
+	jal	quicksortS
+	lw	$2,16($fp)
+	addu	$3,$2,-1
+	sw	$3,40($fp)
+$L28:
+	j	$L24
+$L25:
+$L23:
+	move	$sp,$fp			# sp not trusted here
+	lw	$31,28($sp)
+	lw	$fp,24($sp)
+	addu	$sp,$sp,32
+	j	$31
+	.end	quicksortS
+	.align	2
+	.globl	strlen2
+	.ent	strlen2
+strlen2:
+	.frame	$fp,16,$31		# vars= 8, regs= 1/0, args= 0, extra= 0
+	.mask	0x40000000,-8
+	.fmask	0x00000000,0
+	subu	$sp,$sp,16
+	sw	$fp,8($sp)
+	move	$fp,$sp
+	sw	$4,16($fp)
+	lw	$2,16($fp)
+	sw	$2,0($fp)
+	sw	$0,4($fp)
+$L30:
+	lw	$2,0($fp)
+	addu	$3,$2,1
+	sw	$3,0($fp)
+	lb	$2,0($2)
+	bne	$2,$0,$L33
+	j	$L31
+$L33:
+	lw	$3,4($fp)
+	addu	$2,$3,1
+	move	$3,$2
+	sw	$3,4($fp)
+$L32:
+	j	$L30
+$L31:
+	lw	$2,4($fp)
+	j	$L29
+$L29:
+	move	$sp,$fp			# sp not trusted here
+	lw	$fp,8($sp)
+	addu	$sp,$sp,16
+	j	$31
+	.end	strlen2
+	.align	2
+	.globl	strcmp2
+	.ent	strcmp2
+strcmp2:
+	.frame	$fp,40,$31		# vars= 16, regs= 2/0, args= 16, extra= 0
+	.mask	0xc0000000,-4
+	.fmask	0x00000000,0
+	subu	$sp,$sp,40
+	sw	$31,36($sp)
+	sw	$fp,32($sp)
+	move	$fp,$sp
+	sw	$4,40($fp)
+	sw	$5,44($fp)
+	lw	$4,40($fp)
+	jal	strlen2
+	sw	$2,20($fp)
+	lw	$4,44($fp)
+	jal	strlen2
+	sw	$2,24($fp)
+	lw	$2,20($fp)
+	lw	$3,24($fp)
+	slt	$2,$3,$2
+	bne	$2,$0,$L35
+	lw	$2,20($fp)
+	j	$L36
+$L35:
+	lw	$2,24($fp)
+$L36:
+	sw	$2,28($fp)
+	jal	nop
+	sw	$0,16($fp)
+$L37:
+	lw	$2,16($fp)
+	lw	$3,28($fp)
+	slt	$2,$2,$3
+	bne	$2,$0,$L40
+	j	$L38
+$L40:
+	lw	$2,40($fp)
+	lw	$3,16($fp)
+	addu	$2,$2,$3
+	lw	$3,44($fp)
+	lw	$4,16($fp)
+	addu	$3,$3,$4
+	lb	$2,0($2)
+	lb	$3,0($3)
+	beq	$2,$3,$L41
+	lw	$2,40($fp)
+	lw	$4,16($fp)
+	addu	$3,$2,$4
+	lb	$2,0($3)
+	lw	$3,44($fp)
+	lw	$4,16($fp)
+	addu	$3,$3,$4
+	lb	$4,0($3)
+	subu	$3,$2,$4
+	move	$2,$3
+	j	$L34
+$L41:
+$L39:
+	lw	$3,16($fp)
+	addu	$2,$3,1
+	move	$3,$2
+	sw	$3,16($fp)
+	j	$L37
+$L38:
+	jal	nop
+	lw	$2,20($fp)
+	lw	$3,24($fp)
+	slt	$2,$3,$2
+	beq	$2,$0,$L42
+	li	$2,0x00000001		# 1
+	j	$L34
+	j	$L43
+$L42:
+	lw	$2,24($fp)
+	lw	$3,20($fp)
+	slt	$2,$3,$2
+	beq	$2,$0,$L44
+	li	$2,-1			# 0xffffffff
+	j	$L34
+	j	$L45
+$L44:
+	move	$2,$0
+	j	$L34
+$L45:
+$L43:
+$L34:
+	move	$sp,$fp			# sp not trusted here
+	lw	$31,36($sp)
+	lw	$fp,32($sp)
+	addu	$sp,$sp,40
+	j	$31
+	.end	strcmp2
+	.align	2
+	.globl	memcpy2
+	.ent	memcpy2
+memcpy2:
+	.frame	$fp,16,$31		# vars= 8, regs= 1/0, args= 0, extra= 0
+	.mask	0x40000000,-8
+	.fmask	0x00000000,0
+	subu	$sp,$sp,16
+	sw	$fp,8($sp)
+	move	$fp,$sp
+	sw	$4,16($fp)
+	sw	$5,20($fp)
+	sw	$6,24($fp)
+	sw	$0,0($fp)
+$L47:
+	lw	$2,0($fp)
+	lw	$3,24($fp)
+	slt	$2,$2,$3
+	bne	$2,$0,$L50
+	j	$L48
+$L50:
+	lw	$2,16($fp)
+	addu	$3,$2,1
+	sw	$3,16($fp)
+	lw	$3,20($fp)
+	addu	$4,$3,1
+	sw	$4,20($fp)
+	lbu	$3,0($3)
+	sb	$3,0($2)
+$L49:
+	lw	$3,0($fp)
+	addu	$2,$3,1
+	move	$3,$2
+	sw	$3,0($fp)
+	j	$L47
+$L48:
+$L46:
+	move	$sp,$fp			# sp not trusted here
+	lw	$fp,8($sp)
+	addu	$sp,$sp,16
+	j	$31
+	.end	memcpy2
+	.align	2
+	.globl	nop
+	.ent	nop
+nop:
+	.frame	$fp,8,$31		# vars= 0, regs= 1/0, args= 0, extra= 0
+	.mask	0x40000000,-8
+	.fmask	0x00000000,0
+	subu	$sp,$sp,8
+	sw	$fp,0($sp)
+	move	$fp,$sp
+$L51:
+	move	$sp,$fp			# sp not trusted here
+	lw	$fp,0($sp)
+	addu	$sp,$sp,8
+	j	$31
+	.end	nop
+
+	.comm	array,8000

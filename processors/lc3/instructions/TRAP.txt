@@ -1,0 +1,30 @@
+// TRAP
+//
+mop[3] IR.read
+//
+mop[4] PC.read
+mop[4] ADDR1MUX.SEL = 1
+mop[4] ADDR1MUX.behavior
+mop[4] ADDR2MUX.SEL = 3
+mop[4] ADDR2MUX.behavior
+mop[4] ADDER.behavior
+mop[4] MARMUX.SEL = 1
+mop[4] MARMUX.behavior
+mop[4] REGFILE.NW0 = 31
+mop[4] REGFILE.write
+//
+mop[5] ZEXT.behavior
+mop[5] MARMUX.SEL = 0
+mop[6] MARMUX.behavior
+mop[6] MAR.write
+//
+mop[6] MAR.read
+mop[6] MEM.read
+mop[6] MDRMUX.SEL = 1
+mop[6] MDRMUX.behavior
+mop[6] MDR.write
+//
+mop[7] MDR.read
+mop[7] PCMUX.SEL = 2
+mop[7] PCMUX.behavior
+mop[7] PC.write
